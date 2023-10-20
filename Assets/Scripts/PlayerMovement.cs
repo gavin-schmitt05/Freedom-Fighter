@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask groundLayer;
-    private bool isTouchingGround;
+    public bool isTouchingGround;
     public Animator animator;
     bool jump = false;
 
