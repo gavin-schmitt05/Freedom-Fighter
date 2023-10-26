@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class OpenDoor : MonoBehaviour
 {
-    private GameObject Player;
-
     private GameObject Door;
     
     void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
         Door = GameObject.FindGameObjectWithTag("Door");
     }
 
@@ -25,5 +22,10 @@ public class OpenDoor : MonoBehaviour
         Door.GetComponent<Renderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
     }
+
     
+    
+
+  
+
 }
