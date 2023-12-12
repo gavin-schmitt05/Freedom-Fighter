@@ -17,20 +17,30 @@ public class Bullet : MonoBehaviour
 
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Ladder")
+        if(collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent))
         {
+            enemyComponent.TakeDamage(1);
+            Destroy(gameObject);
+        }
 
+        else if(collision.tag == "Ladder")
+        {
+            
         }
 
         else
         {
             Destroy(gameObject);
         }
+            
     }
-
-
-
 }
+
