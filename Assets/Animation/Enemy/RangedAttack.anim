@@ -6,11 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<<< HEAD:Assets/Animation/Bullet/BulletTravel.anim
-  m_Name: BulletTravel
-========
   m_Name: RangedAttack
->>>>>>>> c5850fa4e9c454aead15174bdbab78d650f1ab9d:Assets/Animation/Enemy/RangedAttack.anim
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -24,19 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-<<<<<<<< HEAD:Assets/Animation/Bullet/BulletTravel.anim
-      value: {fileID: -785920894, guid: 242c86a5e48359c49a11b48aa738c692, type: 3}
-    - time: 0.016666668
-      value: {fileID: -785920894, guid: 242c86a5e48359c49a11b48aa738c692, type: 3}
-    - time: 0.033333335
-      value: {fileID: 712219326, guid: 242c86a5e48359c49a11b48aa738c692, type: 3}
-========
       value: {fileID: -1383071338, guid: c992765067ec27446b435027c4a33dde, type: 3}
     - time: 0.083333336
       value: {fileID: 1634422633, guid: c992765067ec27446b435027c4a33dde, type: 3}
     - time: 0.16666667
       value: {fileID: -1383071338, guid: c992765067ec27446b435027c4a33dde, type: 3}
->>>>>>>> c5850fa4e9c454aead15174bdbab78d650f1ab9d:Assets/Animation/Enemy/RangedAttack.anim
     attribute: m_Sprite
     path: Gun Firing_0
     classID: 212
@@ -56,25 +44,15 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-<<<<<<<< HEAD:Assets/Animation/Bullet/BulletTravel.anim
-    - {fileID: -785920894, guid: 242c86a5e48359c49a11b48aa738c692, type: 3}
-    - {fileID: -785920894, guid: 242c86a5e48359c49a11b48aa738c692, type: 3}
-    - {fileID: 712219326, guid: 242c86a5e48359c49a11b48aa738c692, type: 3}
-========
     - {fileID: -1383071338, guid: c992765067ec27446b435027c4a33dde, type: 3}
     - {fileID: 1634422633, guid: c992765067ec27446b435027c4a33dde, type: 3}
     - {fileID: -1383071338, guid: c992765067ec27446b435027c4a33dde, type: 3}
->>>>>>>> c5850fa4e9c454aead15174bdbab78d650f1ab9d:Assets/Animation/Enemy/RangedAttack.anim
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-<<<<<<<< HEAD:Assets/Animation/Bullet/BulletTravel.anim
-    m_StopTime: 0.050000004
-========
     m_StopTime: 0.18333334
->>>>>>>> c5850fa4e9c454aead15174bdbab78d650f1ab9d:Assets/Animation/Enemy/RangedAttack.anim
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
