@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class OpenDoor : MonoBehaviour
 {
-    private GameObject Door;
     
     void Start()
     {
-        Door = GameObject.FindGameObjectWithTag("Door");
+        
     }
 
     // Update is called once per frame
@@ -19,8 +18,7 @@ public class OpenDoor : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Door.GetComponent<Renderer>().enabled = false;
-        GetComponent<Collider2D>().enabled = false;
+        gameObject.SetActive(false);
     }
 
     

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Door
   - Ladder
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -48,6 +50,12 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1015664651
+    locked: 0
+  - name: Player/Enemy
+    uniqueID: 383894597
+    locked: 0
+  - name: Gun
+    uniqueID: 1003478427
     locked: 0
   - name: Default
     uniqueID: 0
