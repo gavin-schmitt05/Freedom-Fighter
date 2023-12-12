@@ -164,11 +164,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<<< HEAD:Assets/Animation/Player/PlayerAnimator.controller
   m_Name: PlayerAnimator
-========
-  m_Name: Player
->>>>>>>> c5850fa4e9c454aead15174bdbab78d650f1ab9d:Assets/Animation/Player/Player.controller
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: speed
