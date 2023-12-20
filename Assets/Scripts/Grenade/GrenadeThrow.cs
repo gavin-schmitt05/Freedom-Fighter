@@ -10,6 +10,7 @@ public class GrenadeThrow : MonoBehaviour
     public GameObject Player;
     public playerHealth pHealth;
     public Transform ShootPoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,10 @@ public class GrenadeThrow : MonoBehaviour
     {
         if (pHealth.health > 0)
         {
-
+            if (Input.GetButtonDown("Grenade"))
+            {
+                Instantiate(Grenade, ShootPoint.position, ShootPoint.rotation);
+            }
         }
     }
 }

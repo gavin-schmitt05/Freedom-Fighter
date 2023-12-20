@@ -9,13 +9,16 @@ public class GrenadeExplosion : MonoBehaviour
     public float force;
     public LayerMask LayerToHit;
     float GrenadeTimer = 3f;
+    public float Speed = 4;
+    public Rigidbody2D rb;
+    public LayerMask whatisPlatform;
 
-    
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb.velocity = transform.right * Speed;
     }
 
     // Update is called once per frame
@@ -25,7 +28,7 @@ public class GrenadeExplosion : MonoBehaviour
         if (GrenadeTimer <= 0)
         {
             explode();
-            Destroy(gameObject, 1);
+            
         }
     }
     
@@ -42,7 +45,7 @@ public class GrenadeExplosion : MonoBehaviour
             obj.GetComponent<Rigidbody2D>().AddForce(direction * force);
         }
 
-       
+        Destroy(gameObject, 1);
     }
 
 
@@ -51,4 +54,9 @@ public class GrenadeExplosion : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, impactField);
     }
+
+
+
+
+
 }

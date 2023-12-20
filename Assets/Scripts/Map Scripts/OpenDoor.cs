@@ -18,7 +18,10 @@ public class OpenDoor : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        gameObject.SetActive(false);
+       
+            gameObject.SetActive(false);
+        
+        
     }
 
     
