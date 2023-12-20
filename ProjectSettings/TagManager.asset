@@ -9,6 +9,7 @@ TagManager:
   - Gun
   - Enemy
   - Bullet
+  - Grenade
   layers:
   - Default
   - TransparentFX
@@ -20,6 +21,8 @@ TagManager:
   - Enemy
   - Gun
   - Player
+  - Ladder
+  - Door
   - 
   - 
   - 
