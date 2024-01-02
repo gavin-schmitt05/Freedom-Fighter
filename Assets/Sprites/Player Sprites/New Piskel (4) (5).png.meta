@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 54e0b9db7220ba947ab7c2d25651606f
+guid: 0ce6cca30e0c3b34696958bddd47ece4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,49 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_Fixed_0
+      name: New Piskel (4) (5)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e89d7a4752ea3041b6bea8862dd661a
+      internalID: 1176041122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Piskel (4) (5)_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33867cf893c3c4b4d832bd704d157990
+      internalID: -68651701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Piskel (4) (5)_2
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 430dd13ba802cba4798403d82bf7c358
-      internalID: -737095169
+      spriteID: baa7ef74df214dd459349fb97e986a84
+      internalID: 1816407892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Fixed_1
+      name: New Piskel (4) (5)_3
       rect:
         serializedVersion: 2
         x: 32
@@ -140,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ca9004507544db47a6e500ec59401f7
-      internalID: -1492431473
+      spriteID: db4380ab83c76ab4c92e02422488722c
+      internalID: 1564403775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Fixed_2
+      name: New Piskel (4) (5)_4
       rect:
         serializedVersion: 2
         x: 0
@@ -161,8 +203,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f618751665f0d5d46a78c545ad46643b
-      internalID: -59288143
+      spriteID: e171cb09ea7fb8e4a90fa037be8160b0
+      internalID: 1610542721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Piskel (4) (5)_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361e48465cb2ce74ca7c20967bf54bc9
+      internalID: -605447479
       vertices: []
       indices: 
       edges: []
@@ -178,9 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle_Fixed_0: -737095169
-      Idle_Fixed_1: -1492431473
-      Idle_Fixed_2: -59288143
+      New Piskel (4) (5)_4: 1610542721
+      New Piskel (4) (5)_5: -605447479
+      New Piskel (4) (5)_1: -68651701
+      New Piskel (4) (5)_3: 1564403775
+      New Piskel (4) (5)_2: 1816407892
+      New Piskel (4) (5)_0: 1176041122
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
