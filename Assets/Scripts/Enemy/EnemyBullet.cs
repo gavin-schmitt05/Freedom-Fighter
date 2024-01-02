@@ -24,15 +24,15 @@ public class EnemyBullet : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent))
+        if (other.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent))
         {
             enemyComponent.TakeDamage(1);
             Destroy(gameObject);
         }
 
-        else if (collision.tag == "Ladder")
+        else if (other.gameObject.CompareTag("Ladder"))
         {
 
         }
