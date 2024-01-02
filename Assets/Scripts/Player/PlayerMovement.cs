@@ -96,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        else if (pHealth.health == 0) {
+        else if (pHealth.health <= 0) {
 
             animator.SetBool("death", true);
             gun.SetActive(false);
