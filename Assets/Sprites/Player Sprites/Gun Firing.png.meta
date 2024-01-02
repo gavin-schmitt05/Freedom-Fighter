@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 54e0b9db7220ba947ab7c2d25651606f
+guid: c992765067ec27446b435027c4a33dde
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_Fixed_0
+      name: Gun Firing_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,35 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 430dd13ba802cba4798403d82bf7c358
-      internalID: -737095169
+      spriteID: c3f1aeabc55db5747a80dcfd2a3a7718
+      internalID: 1634422633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Fixed_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ca9004507544db47a6e500ec59401f7
-      internalID: -1492431473
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_Fixed_2
+      name: Gun Firing_1
       rect:
         serializedVersion: 2
         x: 0
@@ -161,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f618751665f0d5d46a78c545ad46643b
-      internalID: -59288143
+      spriteID: 5ca26dd84e6a1a240baf165dbc4a0189
+      internalID: -1383071338
       vertices: []
       indices: 
       edges: []
@@ -178,9 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle_Fixed_0: -737095169
-      Idle_Fixed_1: -1492431473
-      Idle_Fixed_2: -59288143
+      Gun Firing_0: 1634422633
+      Gun Firing_1: -1383071338
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

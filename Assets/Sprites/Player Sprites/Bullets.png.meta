@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 54e0b9db7220ba947ab7c2d25651606f
+guid: 242c86a5e48359c49a11b48aa738c692
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_Fixed_0
+      name: Bullet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 430dd13ba802cba4798403d82bf7c358
-      internalID: -737095169
+      spriteID: 49821d3ae07dc2542a39d8312abd1fb6
+      internalID: -785920894
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Fixed_1
+      name: Bullet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ca9004507544db47a6e500ec59401f7
-      internalID: -1492431473
+      spriteID: 941afc7bbb64b7c47a6866ec26809bb1
+      internalID: -1996848449
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Fixed_2
+      name: Bullet_2
       rect:
         serializedVersion: 2
         x: 0
@@ -161,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f618751665f0d5d46a78c545ad46643b
-      internalID: -59288143
+      spriteID: d2aa7515fe628ee49aaee6b45ade354f
+      internalID: 712219326
       vertices: []
       indices: 
       edges: []
@@ -178,9 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle_Fixed_0: -737095169
-      Idle_Fixed_1: -1492431473
-      Idle_Fixed_2: -59288143
+      Bullet_0: -785920894
+      Bullet_1: -1996848449
+      Bullet_2: 712219326
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
