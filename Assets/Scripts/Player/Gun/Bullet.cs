@@ -22,4 +22,25 @@ public class Bullet : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent))
+        {
+            enemyComponent.TakeDamage(1);
+            Destroy(gameObject);
+        }
+
+        else if(collision.tag == "Ladder")
+        {
+            
+        }
+
+        else
+        {
+            Destroy(gameObject);
+        }
+            
+    }
 }
+

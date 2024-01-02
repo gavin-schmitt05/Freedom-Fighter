@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Animation/Player/DeathPlayer.anim.meta
+guid: 2fbfb896dbef4814da06748a63f1fa89
+========
+guid: a2ae7a2d322a1584caaf4e9c4997150c
+>>>>>>>> c5850fa4e9c454aead15174bdbab78d650f1ab9d:Assets/Animation/Enemy/Die.anim.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

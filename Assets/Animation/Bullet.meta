@@ -1,6 +1,10 @@
 fileFormatVersion: 2
-guid: 2fd887ebb94140e4fb3ce0b2fc7e826d
+<<<<<<<< HEAD:Assets/Scenes/SevinScene.unity.meta
+guid: 194b0d281f075a34a9011f2b9361304a
+========
+guid: 5748e1f6d275f8f429b6a92cb56e30f0
 folderAsset: yes
+>>>>>>>> fd44d7accde25c4f9c7de28a3b58032cc3a4200d:Assets/Animation/Bullet.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

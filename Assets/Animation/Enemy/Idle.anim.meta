@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Animation/Bullet/BulletTravel.anim.meta
+guid: 27a717971d2460546a095a9530282ce3
+========
+guid: 2cfc9e1d35c211d41ad94e306f2f10ef
+>>>>>>>> c5850fa4e9c454aead15174bdbab78d650f1ab9d:Assets/Animation/Enemy/Idle.anim.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

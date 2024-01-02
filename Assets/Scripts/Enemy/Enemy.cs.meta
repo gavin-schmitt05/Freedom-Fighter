@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/Grenade/Grenade Throw.cs.meta
+guid: af397087876423942bb397c4db6f9ec2
+========
+guid: 069bbafcf8d85fd488b5614b894a7847
+>>>>>>>> c5850fa4e9c454aead15174bdbab78d650f1ab9d:Assets/Scripts/Enemy/Enemy.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

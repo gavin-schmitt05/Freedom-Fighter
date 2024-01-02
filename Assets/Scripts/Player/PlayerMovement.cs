@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private float direction = 0f;
     public float jumpSpeed = 8f;
     private Rigidbody2D player;
+
     
    
  
@@ -21,14 +22,16 @@ public class PlayerMovement : MonoBehaviour
     public bool isTouchingGround;
     public Animator animator;
     bool jump = false;
+    public playerHealth pHealth;
+    private GameObject gun;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
-        
-       
-        
+        gun = GameObject.FindGameObjectWithTag("Gun");
+
+
     }
 
     // Update is called once per frame
@@ -39,54 +42,67 @@ public class PlayerMovement : MonoBehaviour
         direction = Input.GetAxis("Horizontal");
         animator.SetFloat("speed", Mathf.Abs(direction));
 
-        
-
-        if (direction > 0f)
+        if (pHealth.health > 0)
         {
-            player.velocity = new Vector2(direction * speed, player.velocity.y);
+            animator.SetBool("death", false);
+
+            if (direction > 0f)
+            {
+                player.velocity = new Vector2(direction * speed, player.velocity.y);
+            }
+
+            else if (direction < 0)
+            {
+                player.velocity = new Vector2(direction * speed, player.velocity.y);
+            }
+
+            else
+            {
+                player.velocity = new Vector2(0, player.velocity.y);
+            }
+
+            if (Input.GetButtonDown("Jump"))
+            {
+                jump = true;
+                animator.SetBool("IsJumping", true);
+            }
+
+            if (Input.GetButtonDown("Jump") && isTouchingGround)
+            {
+                player.velocity = new Vector2(player.velocity.x, jumpSpeed);
+
+            }
+
+            if (direction > 0)
+            {
+                gameObject.transform.localScale = new Vector3(1, 1, 1);
+            }
+            else if (direction < 0)
+            {
+                player.transform.localScale = new Vector3(-1, 1, 1);
+            }
+
+
+
+            if (isTouchingGround)
+            {
+                animator.SetBool("IsJumping", false);
+            }
+
+            else if (isTouchingGround == false)
+            {
+                animator.SetBool("IsJumping", true);
+            }
         }
 
-        else if (direction < 0)
-        {
-            player.velocity = new Vector2(direction * speed, player.velocity.y);
-        }
 
-        else
-        {
-            player.velocity = new Vector2(0, player.velocity.y);
-        }
-       
-        if (Input.GetButtonDown("Jump"))
-        {
-            jump = true;
-            animator.SetBool("IsJumping", true);
-        }
+        else if (pHealth.health == 0) {
 
-        if (Input.GetButtonDown("Jump") && isTouchingGround)
-        {
-            player.velocity = new Vector2(player.velocity.x, jumpSpeed);
-            
-        }
+            animator.SetBool("death", true);
+            gun.SetActive(false);
 
-        if (direction > 0)
-        {
-            gameObject.transform.localScale = new Vector3(1, 1, 1);
-        }
-        else if (direction < 0)
-        {
-            player.transform.localScale = new Vector3(-1, 1, 1);
-        }
+           
 
-
-
-        if (isTouchingGround)
-        {
-            animator.SetBool("IsJumping", false);
-        }
-
-        else if (isTouchingGround == false)
-        {
-            animator.SetBool("IsJumping", true);
         }
     }
     
