@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     private float direction = 0f;
     public float jumpSpeed = 8f;
     private Rigidbody2D player;
-
     
    
  

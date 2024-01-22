@@ -3,7 +3,14 @@ guid: 5e1cd74aaaacc5b49838000defbe6251
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Bullet: {instanceID: 0}
+  - rb: {instanceID: 0}
+  - player: {instanceID: 0}
+  - audioSource: {instanceID: 0}
+  - shootingAudioClip: {fileID: 8300000, guid: 6f41a83730b3e584397920ab3585c720, type: 3}
+  - ShootPoint: {instanceID: 0}
+  - pHealth: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
