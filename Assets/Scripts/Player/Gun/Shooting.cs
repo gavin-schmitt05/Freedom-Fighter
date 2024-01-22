@@ -6,6 +6,7 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
 
+
     public GameObject Bullet;
     public Rigidbody2D rb;
     public GameObject player;
@@ -63,5 +64,6 @@ public class Shooting : MonoBehaviour
         GameObject BulletIns = Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
        
         Destroy(BulletIns, 3);
+
     }
 }
