@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GrenadeThrow : MonoBehaviour
 {
-
+    Vector3 GrenadePosition;
+    public LayerMask whatisPlatform;
+    public GameObject boomClone;
     public GameObject Grenade;
     public Rigidbody2D rb;
     public GameObject Player;
@@ -24,8 +26,12 @@ public class GrenadeThrow : MonoBehaviour
         {
             if (Input.GetButtonDown("Grenade"))
             {
+                
                 Instantiate(Grenade, ShootPoint.position, ShootPoint.rotation);
+                Collider2D overCollider2d = Physics2D.OverlapCircle(GrenadePosition, 0.1f, whatisPlatform);
+              
             }
         }
+        }
     }
-}
+

@@ -7,7 +7,6 @@ public class EnemyBullet : MonoBehaviour
 
     public float BulletSpeed;
     public Rigidbody2D rb;
-    //public float Damage;
 
 
     // Start is called before the first frame update
@@ -43,4 +42,5 @@ public class EnemyBullet : MonoBehaviour
         }
 
     }
+
 }
