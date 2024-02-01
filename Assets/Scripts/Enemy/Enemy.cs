@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] float health, maxHealth = 3f;
 
+    public GameObject[] itemDrops;
+
     private void Start()
     {
         health = maxHealth;
@@ -22,7 +24,18 @@ public class Enemy : MonoBehaviour
             {
                 GetComponentInParent<EnemyPatrol>().enabled = false;
             }
+            ItemDrop();
                 
         }
     }
+
+
+    private void ItemDrop()
+    {
+        for(int i = 0; i < itemDrops.Length; i++)
+        {
+            Instantiate(itemDrops[i], transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+        }
+    }
+
 }
