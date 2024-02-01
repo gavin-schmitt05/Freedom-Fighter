@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     private float direction = 0f;
     public float jumpSpeed = 8f;
     private Rigidbody2D player;
-
     
    
  
@@ -99,11 +98,17 @@ public class PlayerMovement : MonoBehaviour
         else if (pHealth.health <= 0) {
 
             animator.SetBool("death", true);
-            gun.SetActive(false);
-
-           
-
+            PlayerDied();
         }
     }
+
+    private void PlayerDied()
+    {
+        LevelManager.instance.GameOver();
+        gameObject.SetActive(false);
+        GetComponent<PlayerMovement>().enabled = false;
+    }
+
+    
     
 }

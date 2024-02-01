@@ -17,8 +17,8 @@ public class EnemyPatrol : MonoBehaviour
     private bool movingLeft;
 
     [Header("Idle Behaviour")]
-    [SerializeField] private float idleDuration;
-    private float idleTimer;
+    [SerializeField] public float idleDuration;
+    public float idleTimer;
 
     [Header("Enemy Animator")]
     [SerializeField] private Animator anim;

@@ -6,10 +6,13 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
 
+
     public GameObject Bullet;
     public Rigidbody2D rb;
     public GameObject player;
-   
+    public AudioSource audioSource;
+    public AudioClip shootingAudioClip;
+
     public Transform ShootPoint;
     public float FireRate;
     float ReadyForShot;
@@ -20,7 +23,6 @@ public class Shooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -52,16 +54,16 @@ public class Shooting : MonoBehaviour
 
             }
         }
-       
-    }
 
+
+    } 
 
     void shoot()
     {
-      
-
+        audioSource.PlayOneShot(shootingAudioClip);
         GameObject BulletIns = Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
        
         Destroy(BulletIns, 3);
+
     }
 }
