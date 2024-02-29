@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4534169621473436745}
   - component: {fileID: 4534169621473436744}
   - component: {fileID: 4534169621473437111}
+  - component: {fileID: 518946914402490563}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -121,7 +122,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.016543776, y: -0.0018381923}
+  m_Offset: {x: -0.015791059, y: -0.0003329292}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -132,7 +133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.37131667, y: 0.39337727}
+  m_Size: {x: 0.3487416, y: 0.3813374}
   m_EdgeRadius: 0
 --- !u!114 &4534169621473437111
 MonoBehaviour:
@@ -147,3 +148,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropForce: 3
+--- !u!114 &518946914402490563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4534169621473437110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4057f54d1455a0c47844f2426b10633e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sr: {fileID: 4534169621473436746}
+  collider: {fileID: 4534169621473436744}
+  moveSpeed: 0
+  itemToPickup: {fileID: 11400000, guid: 77b5e07a9e620ca429a7778f2b27bf46, type: 2}

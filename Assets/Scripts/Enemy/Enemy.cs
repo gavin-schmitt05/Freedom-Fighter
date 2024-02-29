@@ -6,6 +6,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] float health, maxHealth = 3f;
+
+    //For enemy health bars possibly
     //[SerializeField] floatingHealthBar healthBar;
 
     public GameObject[] itemDrops;
@@ -18,6 +20,8 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damageAmount)
     {
         health -= damageAmount;
+
+        //For enemy health bars possibly
         //healthBar.UpdateHealthBar(health, maxHealth);
         if(health <= 0)
         {
