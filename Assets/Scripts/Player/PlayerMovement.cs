@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IDataPersistence
 {
 
 
@@ -11,8 +11,6 @@ public class PlayerMovement : MonoBehaviour
     public float jumpSpeed = 8f;
     private Rigidbody2D player;
     
-   
- 
 
 
     public Transform groundCheck;
@@ -31,6 +29,16 @@ public class PlayerMovement : MonoBehaviour
         gun = GameObject.FindGameObjectWithTag("Gun");
 
 
+    }
+
+    public void LoadData(GameData data)
+    {
+        this.transform.position = data.playerPosition;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.playerPosition = this.transform.position;
     }
 
     // Update is called once per frame
@@ -82,7 +90,6 @@ public class PlayerMovement : MonoBehaviour
             }
 
 
-
             if (isTouchingGround)
             {
                 animator.SetBool("IsJumping", false);
@@ -109,6 +116,4 @@ public class PlayerMovement : MonoBehaviour
         GetComponent<PlayerMovement>().enabled = false;
     }
 
-    
-    
 }

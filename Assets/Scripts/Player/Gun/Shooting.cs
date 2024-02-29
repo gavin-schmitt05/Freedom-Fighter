@@ -6,6 +6,10 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
 
+    [SerializeField] private AmmoCount ammoCount;
+    public float Max;
+    public float Current;
+
 
     public GameObject Bullet;
     public Rigidbody2D rb;
@@ -40,18 +44,27 @@ public class Shooting : MonoBehaviour
         }
 
 
+        if (Input.GetKeyDown("r")) 
+        {
+            Current = Max;
+            ammoCount.UpdateHealthBar(Current, Max);
+        }
 
 
         if (pHealth.health > 0)
         {
-            if (Input.GetMouseButton(0))
+            if (Current > 0)
             {
-                if (Time.time > ReadyForShot)
-                {
-                    ReadyForShot = Time.time + 1 / FireRate;
-                    shoot();
-                }
 
+                if (Input.GetMouseButton(0))
+                {
+                    if (Time.time > ReadyForShot)
+                    {
+                        ReadyForShot = Time.time + 1 / FireRate;
+                        shoot();
+                    }
+
+                }
             }
         }
 
@@ -64,6 +77,6 @@ public class Shooting : MonoBehaviour
         GameObject BulletIns = Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
        
         Destroy(BulletIns, 3);
-
+        ammoCount.UpdateHealthBar(Current--, Max);
     }
 }
