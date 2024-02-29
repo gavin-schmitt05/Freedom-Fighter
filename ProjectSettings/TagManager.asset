@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Bullet
   - Grenade
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -23,10 +24,8 @@ TagManager:
   - Player
   - Ladder
   - Door
-  - 
-  - 
-  - 
-  - 
+  - Coin
+  - Mech
   - 
   - 
   - 

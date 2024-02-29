@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1981151112161540763}
   - component: {fileID: 4186731656026104331}
   - component: {fileID: 7614234326333421239}
-  - component: {fileID: -8959592836762309790}
   m_Layer: 0
   m_Name: Boom
   m_TagString: Untagged
@@ -144,6 +143,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   circleCollider2D: {fileID: 716734881372262701}
+  enemySprite: {fileID: 14611255512050464, guid: 393cf7ff81bd49448a9a42ecc5bc167b, type: 3}
+  SplashRange: 1
+  Damage: 50
+  pHealth: {fileID: 0}
 --- !u!114 &7614234326333421239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,33 +159,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d707dfb5bab8bfa43a11bf347f6ee252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionDistanceGo: {fileID: 3455546688359194848}
   impactField: 0.28
-  force: 10
-  LayerToHit:
-    serializedVersion: 2
-    m_Bits: 704
   Speed: 4
   rb: {fileID: 1981151112161540763}
-  whatisPlatform:
-    serializedVersion: 2
-    m_Bits: 64
-  circleCollider2D: {fileID: 716734881372262701}
-  SplashRange: 1
-  damage: {fileID: -8959592836762309790}
---- !u!114 &-8959592836762309790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347766054482963735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70a19f11843aeab42be924097fc2f5a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
 --- !u!1 &3455546688359194848
 GameObject:
   m_ObjectHideFlags: 0
