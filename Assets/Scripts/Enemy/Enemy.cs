@@ -6,7 +6,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] float health, maxHealth = 3f;
-    [SerializeField] floatingHealthBar healthBar;
+   // [SerializeField] floatingHealthBar healthBar;
 
     public GameObject[] itemDrops;
 
@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damageAmount)
     {
         health -= damageAmount;
-        healthBar.UpdateHealthBar(health, maxHealth);
+      //  healthBar.UpdateHealthBar(health, maxHealth);
         if(health <= 0)
         {
             Destroy(gameObject);

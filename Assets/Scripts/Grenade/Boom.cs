@@ -8,7 +8,10 @@ public class Boom : MonoBehaviour
     public GameObject explosionDistanceGo;
     public LayerMask whatisPlatform;
     public CircleCollider2D circleCollider2D;
+    public GameObject enemySprite;
+
     public float SplashRange = 1;
+    public float Damage = 100;
     public playerHealth pHealth;
 
 
@@ -26,8 +29,9 @@ public class Boom : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         explosionDistanceGo.SetActive(true);
-
+        
         DestroyArea();
+     
 
         Destroy(this.gameObject, 0.05f);
     }
@@ -40,6 +44,7 @@ public class Boom : MonoBehaviour
         {
             for (int j = -radiusInt; j <= radiusInt; j++)
             {
+                
                 Vector3 checkCellPos = new Vector3(transform.position.x + i, transform.position.y + j, 0);
                 float distance = Vector2.Distance(transform.position, checkCellPos) - 0.001f;
                 if (distance <= radiusInt)
@@ -59,31 +64,77 @@ public class Boom : MonoBehaviour
                        }
 
                     }
+                   
                 }
 
 
             }
         }
 
-        if (SplashRange > 0)
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, SplashRange);
+        foreach(Collider2D nearbyObject in colliders)
         {
-            var hitColliders = Physics2D.OverlapCircleAll(transform.position, SplashRange);
-            foreach (var hitCollider in hitColliders)
+            var obj = nearbyObject.GetComponent<Enemy>();
+            var obs = nearbyObject.GetComponent<crateHealth>();
+            var play = nearbyObject.GetComponent<playerHealth>();
+            if (obj != null)
             {
-                var enemy = hitCollider.GetComponent<Enemy>();
-                var player = hitCollider.GetComponent<playerHealth>();
-                if (enemy)
-                {
-                    enemy.TakeDamage(3);
-                }
-                else if (player)
-                {
-                    
-                }
+                obj.TakeDamage(Damage);
             }
+            if (obs != null)
+            {
+                obs.TakeDamage(Damage);
+            }
+            if (play != null)
+            {
+                play.gameObject.GetComponent<playerHealth>().health -= Damage;
+            }
+
         }
+
+     
+
+        //   if (SplashRange > 0)
+        //   {
+        //      var hitColliders = Physics2D.OverlapCircleAll(transform.position, SplashRange);
+        //   foreach (var hitCollider in hitColliders)
+        //    {
+        //      var enemy = hitCollider.GetComponent<Enemy>();
+        //     if (enemy)
+        //      {
+        //           var closestPoint = hitCollider.ClosestPoint(transform.position);
+        //          var distance = Vector3.Distance(closestPoint, transform.position);
+
+        //            var damagePercent = Mathf.InverseLerp(SplashRange, 0, distance);
+        //           enemy.TakeDamage(damagePercent * Damage);
+        //       }
+        //    }
+        //   }
+
+
     }
 
+  //  void splashDamage()
+  //  {
+   //     if (Vector3.Distance(enemySprite.transform.position, gameObject.transform.position) < 5)
+    //    {
+    //        if (enemySprite.TryGetComponent<Enemy>(out Enemy enemyComponent))
+       //     {
+         //       enemyComponent.TakeDamage(1);
+         //       var copy = Instantiate(enemySprite);
+         //       Destroy(copy);
+                //  enemySprite.SetActive(false); 
+       //     }
+      //  }
+   // }
+
+
+    // if (Enemy.TryGetComponent<Enemy>(out Enemy enemyComponent))
+       //             {
+        //                enemyComponent.TakeDamage(3);
+      //                  Destroy(gameObject);
+                        //}
+  
     // Update is called once per frame
     // void Update()
     // {

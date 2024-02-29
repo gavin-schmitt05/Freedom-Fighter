@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class GrenadeExplosion : MonoBehaviour
 {
-    public GameObject explosionDistanceGo;
+   
     public float impactField;
-    public float force;
-    public LayerMask LayerToHit;
-    float GrenadeTimer = 3f;
+    
     public float Speed = 4;
     public Rigidbody2D rb;
-    public LayerMask whatisPlatform;
-    public CircleCollider2D circleCollider2D;
-    public float SplashRange = 1;
-    public Damage damage;
+  
     
 
 
@@ -111,21 +106,21 @@ public class GrenadeExplosion : MonoBehaviour
 
 
 
-        private void OnCollisonEnter2D(Collision2D collision)
-    {
-        if (SplashRange > 0)
-        {
-            var hitColliders = Physics2D.OverlapCircleAll(transform.position, SplashRange);
-            foreach (var hitCollider in hitColliders)
-            {
-                var enemy = hitCollider.GetComponent<Enemy>();
-                if (enemy)
-                {
-                    enemy.TakeDamage(3);
-                }
-            }
-        }
-    }
+   //     private void OnCollisonEnter2D(Collision2D collision)
+ //   {
+    //    if (SplashRange > 0)
+    //    {
+       //     var hitColliders = Physics2D.OverlapCircleAll(transform.position, SplashRange);
+     //       foreach (var hitCollider in hitColliders)
+       //     {
+      //          var enemy = hitCollider.GetComponent<Enemy>();
+      //          if (enemy)
+     //           {
+     //               enemy.TakeDamage(3);
+    //            }
+      //      }
+     //   }
+ //   }
     }
 
 

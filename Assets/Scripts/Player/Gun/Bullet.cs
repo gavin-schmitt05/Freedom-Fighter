@@ -31,6 +31,12 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
 
+        else if (collision.gameObject.TryGetComponent<crateHealth>(out crateHealth crateComponent))
+        {
+            crateComponent.TakeDamage(1);
+            Destroy(gameObject);
+        }
+
         else if(collision.tag == "Ladder")
         {
             
