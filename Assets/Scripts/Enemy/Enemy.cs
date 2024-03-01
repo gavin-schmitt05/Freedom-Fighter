@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     //[SerializeField] floatingHealthBar healthBar;
 
     public GameObject[] itemDrops;
+    public Item[] itemsToSpawn;
 
     private void Start()
     {
@@ -33,6 +34,11 @@ public class Enemy : MonoBehaviour
             ItemDrop();
                 
         }
+    }
+
+    private void LootRandomizer()
+    {
+
     }
 
 
