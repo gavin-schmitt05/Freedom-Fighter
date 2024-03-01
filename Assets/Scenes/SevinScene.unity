@@ -975,6 +975,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39a0657c1ffd0ac47b5c8594c3f03108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whatisPlatform:
+    serializedVersion: 2
+    m_Bits: 0
+  boomClone: {fileID: 0}
   Grenade: {fileID: 3463112753378846904, guid: 22368073c20cd264f9054c342b13f419, type: 3}
   rb: {fileID: 0}
   Player: {fileID: 1281191742}
@@ -1007,7 +1011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e1cd74aaaacc5b49838000defbe6251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 5565813430887369256, guid: 9f4bd2a9153c10c40988744ef8c851e0, type: 3}
+  Bullet: {fileID: 5565813430887369256, guid: 665ed2502e85a9148a7bc03469fa7eea, type: 3}
   rb: {fileID: 0}
   player: {fileID: 1281191742}
   audioSource: {fileID: 1281191753}
