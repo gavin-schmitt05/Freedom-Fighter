@@ -21,6 +21,7 @@ public enum ItemType
 {
     Gun,
     Coin,
+    Grenade
 
     
 }

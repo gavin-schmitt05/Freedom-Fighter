@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5699753794441736071}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.527, y: -0.091, z: 0}
+  m_LocalPosition: {x: 0.409, y: -0.045, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -201,10 +201,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af397087876423942bb397c4db6f9ec2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: -1
+  health: 0
   maxHealth: 3
-  itemDrops:
+  itemsToSpawn:
+  - {fileID: 7615908811750458679, guid: 06c19221ce1445e4fb49a8b4f8f9bc44, type: 3}
   - {fileID: 4534169621473437110, guid: 308a63157087ba149b880cc68e782fd8, type: 3}
+  - {fileID: 3463112753378846904, guid: 22368073c20cd264f9054c342b13f419, type: 3}
+  itemSpawning: 0
 --- !u!114 &5699753794856907592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,14 +221,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCooldown: 0
-  range: 9.56
+  range: 12.1
   Bullet: {fileID: 9212491953108868227, guid: 618bde8484439884bbb605a944ff2e61, type: 3}
   rb: {fileID: 0}
   Enemy: {fileID: 5699753794856907594}
   FirePoint: {fileID: 5699753794441736070}
   FireRate: 2
   direction: 0
-  colliderDistance: 0.19
+  colliderDistance: 0.2249
   boxCollider: {fileID: 5699753794856907597}
   playerLayer:
     serializedVersion: 2
