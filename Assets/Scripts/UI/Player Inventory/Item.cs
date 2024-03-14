@@ -23,7 +23,6 @@ public enum ItemType
     Coin,
     Grenade
 
-    
 }
 
 public enum ActionType

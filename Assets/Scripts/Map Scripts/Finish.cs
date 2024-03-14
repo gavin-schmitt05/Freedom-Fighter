@@ -6,10 +6,23 @@ using UnityEngine.SceneManagement;
 public class Finish : MonoBehaviour
 {
     private bool levelComplete = false;
+    public static Finish instance { get; private set; }
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogError("Found more than one data persistence manager, destroying newest one");
+            Destroy(this.gameObject);
+            return;
+        }
+        instance = this;
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     private void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
