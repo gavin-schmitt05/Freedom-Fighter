@@ -18,13 +18,21 @@ public class OpenDoor : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("Player"))
         {
 
         }
-        else
+        else if (collision.gameObject.CompareTag("Bullet"))
         {
-           gameObject.SetActive(false);
+
+        }
+        else if (collision.gameObject.CompareTag("Ground"))
+        {
+
+        }
+        else if (collision.gameObject.CompareTag("Gun"))
+        {
+
         }
     }
        

@@ -6,7 +6,7 @@ using System;
 public class Loot : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer sr;
-    [SerializeField] private BoxCollider2D collider;
+    [SerializeField] private new BoxCollider2D collider;
     [SerializeField] private float moveSpeed;
     [SerializeField] private Item itemToPickup;
 
