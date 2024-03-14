@@ -19,7 +19,7 @@ public class DataPersistenceManager : MonoBehaviour
     { 
         if (instance != null)
         {
-            Debug.LogError("Found more than one data persistence manager, destroying newest one");
+            Debug.LogWarning("Found more than one data persistence manager, destroying newest one");
             Destroy(this.gameObject);
             return;
         }
@@ -32,13 +32,11 @@ public class DataPersistenceManager : MonoBehaviour
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
 
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
-        SceneManager.sceneUnloaded -= OnSceneUnloaded;
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -83,8 +81,6 @@ public class DataPersistenceManager : MonoBehaviour
         {
             dataPersistenceObj.LoadData(gameData);
         }
-
-        Debug.Log("Test " + gameData.temp);
     }
 
     public void SaveGame() 
@@ -92,11 +88,8 @@ public class DataPersistenceManager : MonoBehaviour
         //pass data to other scripts
         foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
         {
-            dataPersistenceObj.SaveData(ref gameData);
+            dataPersistenceObj.SaveData(gameData);
         }
-
-        Debug.Log("Test " + gameData.temp);
-
         //save data to file with data handler
         dataHandler.Save(gameData);
     }
@@ -108,7 +101,7 @@ public class DataPersistenceManager : MonoBehaviour
 
     private List<IDataPersistence> FindAllDataPersistenceObjects()
     {
-        IEnumerable<IDataPersistence> dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>()
+        IEnumerable<IDataPersistence> dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>(true)
             .OfType<IDataPersistence>();
 
         return new List<IDataPersistence>(dataPersistenceObjects);

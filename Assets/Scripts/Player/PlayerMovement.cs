@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     private Rigidbody2D player;
     
 
-
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask groundLayer;
@@ -27,8 +26,6 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     {
         player = GetComponent<Rigidbody2D>();
         gun = GameObject.FindGameObjectWithTag("Gun");
-
-
     }
 
     public void LoadData(GameData data)
@@ -36,7 +33,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         this.transform.position = data.playerPosition;
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
         data.playerPosition = this.transform.position;
     }

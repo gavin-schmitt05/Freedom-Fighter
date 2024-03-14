@@ -32,6 +32,6 @@ public class GrenadeThrow : MonoBehaviour
               
             }
         }
-        }
     }
+}
 

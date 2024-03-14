@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryManager : MonoBehaviour
+public class InventoryManager : MonoBehaviour, IDataPersistence
 {
     public static InventoryManager instance;
 
@@ -13,6 +13,16 @@ public class InventoryManager : MonoBehaviour
     public void Awake()
     {
         instance = this;
+    }
+
+    public void LoadData(GameData data)
+    {
+
+    }
+
+    public void SaveData(GameData data)
+    {
+
     }
 
     public bool AddItem(Item item)

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
+
 
 public class Boom : MonoBehaviour
 {
@@ -19,21 +21,46 @@ public class Boom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+        // AstarPath.active.Scan();
         explosionDistanceGo.SetActive(false);
         StartCoroutine(Booom());
+        
+        // yield return new WaitForSeconds(4f);
+        //AstarPath.active.Scan();
+
+
     }
 
 
 
     IEnumerator Booom()
     {
+
         yield return new WaitForSeconds(3f);
         explosionDistanceGo.SetActive(true);
         
         DestroyArea();
-     
 
+
+       // AstarPath.active.Scan();
         Destroy(this.gameObject, 0.05f);
+        Debug.Log("test");
+
+
+       
+    }
+
+
+    IEnumerator Check()
+    {
+
+        yield return new WaitForSeconds(3.1f);
+        AstarPath.active.Scan();
+        Debug.Log("PLEASE WORK PRETTY PLEASE---------------->");
+
+
+
     }
 
 
@@ -61,7 +88,9 @@ public class Boom : MonoBehaviour
                         foreach (Collider2D overColl in overCollider2d)
                         {
                             overColl.GetComponent<Ground>().MakeDot(checkCellPos);
-                       }
+                          //  AstarPath.active.Scan();
+                            
+                        }
 
                     }
                    
@@ -69,7 +98,9 @@ public class Boom : MonoBehaviour
 
 
             }
+            
         }
+        
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, SplashRange);
         foreach(Collider2D nearbyObject in colliders)
@@ -92,52 +123,15 @@ public class Boom : MonoBehaviour
 
         }
 
-     
 
-        //   if (SplashRange > 0)
-        //   {
-        //      var hitColliders = Physics2D.OverlapCircleAll(transform.position, SplashRange);
-        //   foreach (var hitCollider in hitColliders)
-        //    {
-        //      var enemy = hitCollider.GetComponent<Enemy>();
-        //     if (enemy)
-        //      {
-        //           var closestPoint = hitCollider.ClosestPoint(transform.position);
-        //          var distance = Vector3.Distance(closestPoint, transform.position);
 
-        //            var damagePercent = Mathf.InverseLerp(SplashRange, 0, distance);
-        //           enemy.TakeDamage(damagePercent * Damage);
-        //       }
-        //    }
-        //   }
 
+
+        
+       // Debug.Log("test---------------->");
+      //  AstarPath.active.Scan();
 
     }
 
-  //  void splashDamage()
-  //  {
-   //     if (Vector3.Distance(enemySprite.transform.position, gameObject.transform.position) < 5)
-    //    {
-    //        if (enemySprite.TryGetComponent<Enemy>(out Enemy enemyComponent))
-       //     {
-         //       enemyComponent.TakeDamage(1);
-         //       var copy = Instantiate(enemySprite);
-         //       Destroy(copy);
-                //  enemySprite.SetActive(false); 
-       //     }
-      //  }
-   // }
-
-
-    // if (Enemy.TryGetComponent<Enemy>(out Enemy enemyComponent))
-       //             {
-        //                enemyComponent.TakeDamage(3);
-      //                  Destroy(gameObject);
-                        //}
-  
-    // Update is called once per frame
-    // void Update()
-    // {
-
-    // }
+ 
 }

@@ -6,12 +6,10 @@ using UnityEngine;
 
 public class GameData 
 {
-    public int temp;
     public Vector3 playerPosition;
 
     public GameData()
     {
-        this.temp = 0;
         playerPosition = new Vector3(-18, 2, 0);
     }
 }
