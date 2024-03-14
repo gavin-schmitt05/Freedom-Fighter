@@ -7,20 +7,20 @@ public class WeaponInventoryManager : MonoBehaviour
     //
 
     [SerializeField] public int maxStackedItems;
-    public InventorySlot[] inventorySlots;
-    public GameObject inventoryItemPrefab;
+    public WeaponInventorySlot[] weaponInventorySlots;
+    public GameObject weaponInventoryItemPrefab;
 
     /*public void Awake()
     {
         instance = this;
     }*/
 
-    /*public bool AddItem(Item item)
+    public bool AddItem(Item item)
     {
         // Check if any slot has an item with count lower than max
-        for (int i = 0; i < inventorySlots.Length; i++)
+        for (int i = 0; i < weaponInventorySlots.Length; i++)
         {
-            InventorySlot slot = inventorySlots[i];
+            WeaponInventorySlot slot = weaponInventorySlots[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
             if (itemInSlot != null && itemInSlot.item == item && itemInSlot.count < maxStackedItems && itemInSlot.item.stackable == true)
             {
@@ -31,9 +31,9 @@ public class WeaponInventoryManager : MonoBehaviour
         }
 
         // Find any empty slot
-        for (int i = 0; i < inventorySlots.Length; i++)
+        for (int i = 0; i < weaponInventorySlots.Length; i++)
         {
-            InventorySlot slot = inventorySlots[i];
+            WeaponInventorySlot slot = weaponInventorySlots[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
             if (itemInSlot == null)
             {
@@ -43,12 +43,12 @@ public class WeaponInventoryManager : MonoBehaviour
         }
 
         return false;
-    }*/
+    }
 
-    /*void SpawnNewItem(Item item, InventorySlot slot)
+    void SpawnNewItem(Item item, WeaponInventorySlot slot)
     {
-        GameObject newItemGo = Instantiate(inventoryItemPrefab, slot.transform);
+        GameObject newItemGo = Instantiate(weaponInventoryItemPrefab, slot.transform);
         InventoryItem inventoryItem = newItemGo.GetComponent<InventoryItem>();
         inventoryItem.InitialiseItem(item);
-    }*/
+    }
 }

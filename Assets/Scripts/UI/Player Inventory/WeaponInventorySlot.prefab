@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6941744105301838483}
   - component: {fileID: 7177909572941502477}
   - component: {fileID: 1952261528644103317}
-  - component: {fileID: -5703383943761707796}
+  - component: {fileID: 7202520769401741945}
   m_Layer: 5
   m_Name: WeaponInventorySlot
   m_TagString: Untagged
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
---- !u!114 &-5703383943761707796
+--- !u!114 &7202520769401741945
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,6 +111,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 9189348720851260088}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c75787af82b83a34db25f93582375f7e, type: 3}
+  m_Script: {fileID: 11500000, guid: 412a70af155c4a44f9d3c5b4358e8a5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allowedItems:
+  - {fileID: 11400000, guid: 2aff7a4fe3895ad4dac6ca4168a8b735, type: 2}
+  - {fileID: 11400000, guid: 58ad0afc3724b4e41970698b3ff4fc37, type: 2}

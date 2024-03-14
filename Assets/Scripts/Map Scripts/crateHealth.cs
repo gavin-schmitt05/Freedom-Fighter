@@ -10,7 +10,9 @@ public class crateHealth : MonoBehaviour
     [SerializeField] float health, maxHealth = 3f;
     // [SerializeField] floatingHealthBar healthBar;
 
-    public GameObject[] itemDrops;
+    public GameObject[] itemsToSpawn;
+    [HideInInspector] public int itemSpawning;
+    private System.Random rnd = new System.Random();
 
     private void Start()
     {
@@ -26,26 +28,48 @@ public class crateHealth : MonoBehaviour
         //  healthBar.UpdateHealthBar(health, maxHealth);
         if (health <= 0)
         {
-            Destroy(gameObject);
-            if (GetComponentInParent<EnemyPatrol>() != null)
+            LootRandomizer();
+            if (itemSpawning != 3)
             {
-                GetComponentInParent<EnemyPatrol>().enabled = false;
+                ItemDrop();
             }
-            ItemDrop();
+            Destroy(gameObject);
+        }
+    }
 
+    private void LootRandomizer()
+    {
+        int percentagePicker = rnd.Next(1, 101);
+
+        if (percentagePicker >= 1 && percentagePicker <= 50)
+        {
+            Debug.Log("Spawning assualt rifle");
+            itemSpawning = 0;
+        }
+        else if (percentagePicker >= 51 && percentagePicker <= 75)
+        {
+            Debug.Log("Spawning coin");
+            itemSpawning = 1;
+        }
+        else if (percentagePicker >= 76 && percentagePicker <= 88)
+        {
+            Debug.Log("Spawning grenade");
+            itemSpawning = 2;
+        }
+        else if (percentagePicker >= 89 && percentagePicker <= 100)
+        {
+            Debug.Log("You got nothing lol");
+            itemSpawning = 3;
         }
     }
 
 
     private void ItemDrop()
     {
-        for (int i = 0; i < itemDrops.Length; i++)
-        {
-            Instantiate(itemDrops[i], transform.position + new Vector3(0, 1, 0), Quaternion.identity);
-        }
+        Instantiate(itemsToSpawn[itemSpawning], transform.position + new Vector3(0, 1, 0), Quaternion.identity);
     }
 
-   private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
