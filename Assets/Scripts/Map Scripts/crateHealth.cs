@@ -27,10 +27,6 @@ public class crateHealth : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
-            if (GetComponentInParent<EnemyPatrol>() != null)
-            {
-                GetComponentInParent<EnemyPatrol>().enabled = false;
-            }
             ItemDrop();
 
         }
