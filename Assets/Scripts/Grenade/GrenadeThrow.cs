@@ -13,6 +13,13 @@ public class GrenadeThrow : MonoBehaviour
     public playerHealth pHealth;
     public Transform ShootPoint;
 
+     public Item itemReference;
+
+    public InventorySlot[] inventorySlots;
+
+    public GameObject invetoryItemPrefab;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,13 +31,26 @@ public class GrenadeThrow : MonoBehaviour
     {
         if (pHealth.health > 0)
         {
-            if (Input.GetButtonDown("Grenade"))
-            {
-                
-                Instantiate(Grenade, ShootPoint.position, ShootPoint.rotation);
-                Collider2D overCollider2d = Physics2D.OverlapCircle(GrenadePosition, 0.1f, whatisPlatform);
-              
-            }
+
+           if (Input.GetButtonDown("Grenade"))
+           {
+               for (int i = 0; i < inventorySlots.Length; i++)
+               {
+                   InventorySlot slot = inventorySlots[i];
+                   InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+                   //InventorySlot itemSlot = slot.GetComponentInChildren<InventorySlot>();
+                   if (itemInSlot != null && itemInSlot.item == itemReference)
+                   {
+                       itemInSlot.count--;
+                       Destroy(itemInSlot.gameObject);
+                       itemInSlot.RefreshCount();
+                       Instantiate(Grenade, ShootPoint.position, ShootPoint.rotation);
+                       Collider2D overCollider2d = Physics2D.OverlapCircle(GrenadePosition, 0.1f, whatisPlatform);
+                       Debug.Log("Instantiated Grenade");
+                       break;
+                   }
+               }
+           }
         }
     }
 }

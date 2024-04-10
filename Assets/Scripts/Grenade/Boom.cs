@@ -18,46 +18,62 @@ public class Boom : MonoBehaviour
 
 
 
+
+
     // Start is called before the first frame update
     void Start()
     {
         
-        // AstarPath.active.Scan();
-        explosionDistanceGo.SetActive(false);
-        StartCoroutine(Booom());
+
         
-        // yield return new WaitForSeconds(4f);
-        //AstarPath.active.Scan();
+        explosionDistanceGo.SetActive(false);
+        StartCoroutine(Checkboom());
+        Debug.Log("played boom script sir");
+        
+        
+       
 
 
     }
+    
+
+   
+
+
+
+      
 
 
 
     IEnumerator Booom()
     {
-
-        yield return new WaitForSeconds(3f);
+        Debug.Log("Booooooom created");
+        yield return new WaitForSeconds(2.5f);
         explosionDistanceGo.SetActive(true);
         
+        
         DestroyArea();
+      
 
 
-       // AstarPath.active.Scan();
+      
         Destroy(this.gameObject, 0.05f);
         Debug.Log("test");
+        
 
 
        
     }
 
 
-    IEnumerator Check()
+    IEnumerator Checkboom()
     {
-
-        yield return new WaitForSeconds(3.1f);
+        yield return new WaitForSeconds(1f);
+        yield return StartCoroutine(Booom());
         AstarPath.active.Scan();
-        Debug.Log("PLEASE WORK PRETTY PLEASE---------------->");
+        Debug.Log("is this working ---------------------------------------------->");
+        
+        
 
 
 
@@ -88,7 +104,7 @@ public class Boom : MonoBehaviour
                         foreach (Collider2D overColl in overCollider2d)
                         {
                             overColl.GetComponent<Ground>().MakeDot(checkCellPos);
-                          //  AstarPath.active.Scan();
+                            Debug.Log("played for each statement");
                             
                         }
 
@@ -129,9 +145,16 @@ public class Boom : MonoBehaviour
 
         
        // Debug.Log("test---------------->");
-      //  AstarPath.active.Scan();
+      
 
     }
+
+
+
+
+
+
+    
 
  
 }

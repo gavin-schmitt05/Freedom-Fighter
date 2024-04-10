@@ -70,6 +70,7 @@ public class Enemy : MonoBehaviour
             Debug.Log("You got nothing lol");
             itemSpawning = 3;
         }
+        
     }
 
     private void ItemDrop()
