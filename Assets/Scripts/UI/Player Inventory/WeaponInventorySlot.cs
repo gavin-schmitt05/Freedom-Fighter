@@ -5,14 +5,18 @@ using UnityEngine.EventSystems;
 
 public class WeaponInventorySlot : MonoBehaviour, IDropHandler
 {
+    public InventoryItem inventoryItem;
 
     public void OnDrop(PointerEventData eventData)
     {
         if (transform.childCount == 0)
         {
-            GameObject dropped = eventData.pointerDrag;
-            InventoryItem InventoryItem = dropped.GetComponent<InventoryItem>();
-            InventoryItem.parentAfterDrag = transform;
+            if(inventoryItem.item.stackable == false)
+            {
+                GameObject dropped = eventData.pointerDrag;
+                InventoryItem InventoryItem = dropped.GetComponent<InventoryItem>();
+                InventoryItem.parentAfterDrag = transform;
+            }
         }
     }
 }

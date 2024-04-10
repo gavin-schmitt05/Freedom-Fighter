@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class AmmoCount : MonoBehaviour
 {
-    [SerializeField] private Slider slider;
+    [SerializeField] public Slider slider;
 
     // Start is called before the first frame update
 

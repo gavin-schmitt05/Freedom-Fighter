@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2248560372237511766}
   - component: {fileID: 2542479986566775728}
+  - component: {fileID: 2964436287084163194}
+  - component: {fileID: 5191792953590278483}
   m_Layer: 8
   m_Name: Assualt Rifle
   m_TagString: Gun
@@ -85,6 +87,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2964436287084163194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7615908811750458679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e1cd74aaaacc5b49838000defbe6251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoCount: {fileID: 6148919330714740201, guid: 63f19a4adc15a8c47885e6c62b6c591d, type: 3}
+  Max: 30
+  Current: 30
+  Bullet: {fileID: 5565813430887369256, guid: 665ed2502e85a9148a7bc03469fa7eea, type: 3}
+  rb: {fileID: 0}
+  player: {fileID: 5719263274197723971, guid: 529ec9aacea6f43e1be37f1a95acb8d3, type: 3}
+  audioSource: {fileID: 0}
+  shootingAudioClip: {fileID: 0}
+  ShootPoint: {fileID: 5098737192387658098}
+  FireRate: 7
+  direction: 0
+  pHealth: {fileID: 5719263274197723962, guid: 529ec9aacea6f43e1be37f1a95acb8d3, type: 3}
+  blackBackground: {fileID: 6501601338132462466, guid: 9257f98df68f7d64ab9ea1f3403c86e7, type: 3}
+--- !u!114 &5191792953590278483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7615908811750458679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7386e8e54440794caa57906b0cf4415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 7861873021322306772, guid: 63f19a4adc15a8c47885e6c62b6c591d, type: 3}
 --- !u!1 &8700999392966326770
 GameObject:
   m_ObjectHideFlags: 0
