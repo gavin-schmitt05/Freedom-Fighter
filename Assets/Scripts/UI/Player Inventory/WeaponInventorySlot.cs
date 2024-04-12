@@ -5,17 +5,16 @@ using UnityEngine.EventSystems;
 
 public class WeaponInventorySlot : MonoBehaviour, IDropHandler
 {
-    public InventoryItem inventoryItem;
-
     public void OnDrop(PointerEventData eventData)
     {
+        GameObject dropped = eventData.pointerDrag;
+        InventoryItem InventoryItem = dropped.GetComponent<InventoryItem>();
         if (transform.childCount == 0)
         {
-            if(inventoryItem.item.stackable == false)
+            if(InventoryItem.item.isGun == true)
             {
-                GameObject dropped = eventData.pointerDrag;
-                InventoryItem InventoryItem = dropped.GetComponent<InventoryItem>();
                 InventoryItem.parentAfterDrag = transform;
+                
             }
         }
     }

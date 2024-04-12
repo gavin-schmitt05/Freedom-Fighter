@@ -17,5 +17,6 @@ MonoBehaviour:
   itemPrefab: {fileID: 0}
   range: {x: 5, y: 4}
   stackable: 1
+  isGun: 0
   maxStackOfItem: 6
   image: {fileID: 21300000, guid: d107c2aefd217134e84b0ac29424fb0d, type: 3}

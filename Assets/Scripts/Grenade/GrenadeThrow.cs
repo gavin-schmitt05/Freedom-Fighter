@@ -39,7 +39,9 @@ public class GrenadeThrow : MonoBehaviour
                     if (itemInSlot != null && itemInSlot.item == itemRefrence)
                     {
                         itemInSlot.count--;
-                        Destroy(itemInSlot.gameObject);
+                        if(itemInSlot.count <= 0){
+                            Destroy(itemInSlot.gameObject);
+                        }
                         itemInSlot.RefreshCount();
                         Instantiate(Grenade, ShootPoint.position, ShootPoint.rotation);
                         Collider2D overCollider2d = Physics2D.OverlapCircle(GrenadePosition, 0.1f, whatisPlatform);

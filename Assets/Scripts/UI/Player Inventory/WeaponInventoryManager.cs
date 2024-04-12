@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WeaponInventoryManager : MonoBehaviour
 {
-    //
 
     [SerializeField] public int maxStackedItems;
     public WeaponInventorySlot[] weaponInventorySlots;
@@ -22,7 +21,7 @@ public class WeaponInventoryManager : MonoBehaviour
         {
             WeaponInventorySlot slot = weaponInventorySlots[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
-            if (itemInSlot != null && itemInSlot.item == item && itemInSlot.count < maxStackedItems && itemInSlot.item.stackable == true)
+            if (itemInSlot != null && itemInSlot.item == item && itemInSlot.count < itemInSlot.item.maxStackOfItem && itemInSlot.item.stackable == true)
             {
                 itemInSlot.count++;
                 itemInSlot.RefreshCount();
