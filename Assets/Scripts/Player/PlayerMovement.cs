@@ -111,6 +111,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         LevelManager.instance.GameOver();
         gameObject.SetActive(false);
         GetComponent<PlayerMovement>().enabled = false;
+        //DataPersistenceManager.instance.NewGame();
     }
 
 }

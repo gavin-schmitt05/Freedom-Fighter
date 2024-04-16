@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour
 {
+    //public GameObject inventory;
     private bool levelComplete = false;
     public static Finish instance { get; private set; }
 
@@ -12,7 +13,7 @@ public class Finish : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogError("Found more than one data persistence manager, destroying newest one");
+            Debug.LogError("Found more than one finish, destroying newest one");
             Destroy(this.gameObject);
             return;
         }
@@ -37,7 +38,8 @@ public class Finish : MonoBehaviour
     private void CompleteLevel()
     {
         DataPersistenceManager.instance.SaveGame();
-        SceneManager.LoadScene(1);
+        //inventory.transform.SetParent(null);
+        SceneManager.LoadScene(2);
     }
 }
 

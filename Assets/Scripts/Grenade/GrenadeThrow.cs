@@ -29,7 +29,6 @@ public class GrenadeThrow : MonoBehaviour
                 
                 Instantiate(Grenade, ShootPoint.position, ShootPoint.rotation);
                 Collider2D overCollider2d = Physics2D.OverlapCircle(GrenadePosition, 0.1f, whatisPlatform);
-              
             }
         }
     }
