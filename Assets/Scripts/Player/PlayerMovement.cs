@@ -6,9 +6,9 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
 {
 
 
-    public float speed = 5f;
+    public float speed = 3.5f;
     private float direction = 0f;
-    public float jumpSpeed = 8f;
+    public float jumpSpeed = 7f;
     private Rigidbody2D player;
     
 
@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
             }
 
 
-            if (isTouchingGround)
+            if (isTouchingGround)   //jumper
             {
                 animator.SetBool("IsJumping", false);
             }
