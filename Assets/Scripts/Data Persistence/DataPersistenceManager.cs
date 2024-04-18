@@ -22,7 +22,7 @@ public class DataPersistenceManager : MonoBehaviour
     { 
         if (instance != null)
         {
-            Debug.LogWarning("Found more than one data persistence manager, destroying newest one");
+            Debug.LogWarning("Found more than one Data Persistence Manager, destroying newest one");
             Destroy(this.gameObject);
             return;
         }
@@ -55,7 +55,7 @@ public class DataPersistenceManager : MonoBehaviour
         SaveGame();
     }
 
-   /*temp remove after demo obsolete once above code functions
+   /*temp; remove after demo, obsolete once above code functions
    void Start()
    {
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();

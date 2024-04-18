@@ -13,7 +13,7 @@ public class Finish : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogError("Found more than one finish, destroying newest one");
+            Debug.LogError("Found more than one Finish, destroying newest one");
             Destroy(this.gameObject);
             return;
         }

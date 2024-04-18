@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class InventoryPersistence : MonoBehaviour
 {
-
-    public static InventoryPersistence instance { get; private set; }
-
-   private void Awake()
-    {
+    public static InventoryPersistence instance {get; private set;}
+    private void Awake()
+    { 
         if (instance != null)
         {
-            Debug.LogError("Found more than one data persistence manager, destroying newest one");
+            Debug.LogWarning("Found more than one Inventory Persistence, destroying newest one");
             Destroy(this.gameObject);
             return;
         }
@@ -19,9 +17,4 @@ public class InventoryPersistence : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

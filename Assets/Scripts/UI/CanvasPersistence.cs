@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class canvas : MonoBehaviour
+public class CanvasPersistence : MonoBehaviour
 {
-    public static canvas instance { get; private set; }
-     private void Awake()
-    {
+    public static CanvasPersistence instance {get; private set;}
+    private void Awake()
+    { 
         if (instance != null)
         {
-            Debug.LogError("Found more than one canvas, destroying newest one");
+            Debug.LogWarning("Found more than one Canvas Persistence, destroying newest one");
             Destroy(this.gameObject);
             return;
         }
