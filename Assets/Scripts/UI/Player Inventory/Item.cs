@@ -23,6 +23,7 @@ public enum ItemType
     Coin,
     Grenade,
     HealthPack,
+    Ammo,
 
 }
 

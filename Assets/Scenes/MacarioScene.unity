@@ -508,7 +508,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 350909335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.51, y: 2.74, z: 0}
+  m_LocalPosition: {x: 9.439, y: 2.646, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2270,6 +2270,13 @@ MonoBehaviour:
     maxNormalAngle: 0
   EnemySpawner: {fileID: 1549730350}
   Timer: {fileID: 2105355983}
+  timeAmount: {fileID: 0}
+  extractionZone: {fileID: 0}
+  whatisPlayer:
+    serializedVersion: 2
+    m_Bits: 512
+  range: 1
+  circleCollider2D: {fileID: 0}
 --- !u!114 &1331274535 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 326823186718773969, guid: d765c20cade622546b543c5f6ac6f0dd, type: 3}
