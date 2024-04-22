@@ -10,6 +10,7 @@ public class Shooting : MonoBehaviour
     public float Max;
     public float Current;
 
+
     public GameObject Bullet;
     public Rigidbody2D rb;
     public GameObject player;
@@ -42,15 +43,6 @@ public class Shooting : MonoBehaviour
             ShootPoint.transform.eulerAngles = new Vector3(0, 180, 0);
         }
 
-        if(Input.GetMouseButtonDown(0))
-        {
-            if(Time.time > ReadyForShot)
-            {
-                ReadyForShot = Time.time + 1 / FireRate;
-                shoot();
-            }
-        }
-
 
         if (Input.GetKeyDown("r")) 
         {
@@ -79,10 +71,12 @@ public class Shooting : MonoBehaviour
 
     } 
 
-    void shoot() //audio
+    void shoot()
     {
         audioSource.PlayOneShot(shootingAudioClip);
         GameObject BulletIns = Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
-    
+       
+        Destroy(BulletIns, 3);
+        ammoCount.UpdateHealthBar(Current--, Max);
     }
 }
