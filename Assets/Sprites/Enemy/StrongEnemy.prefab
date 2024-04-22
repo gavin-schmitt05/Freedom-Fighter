@@ -133,7 +133,7 @@ MonoBehaviour:
     m_Bits: 512
   obstructionLayer:
     serializedVersion: 2
-    m_Bits: 2112
+    m_Bits: 64
   playerRef: {fileID: 7776579732614827295, guid: 420cb4a89e2d749469e6a18f6b6dd011, type: 3}
   target: {fileID: 0}
   activeDistance: 50
@@ -217,7 +217,7 @@ MonoBehaviour:
   boxCollider: {fileID: 983400769509486383}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 16896
 --- !u!61 &983400769509486383
 BoxCollider2D:
   m_ObjectHideFlags: 0

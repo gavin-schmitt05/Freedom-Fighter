@@ -8,7 +8,7 @@ public class Extraction : CollidableObject
 
     public GameObject EnemySpawner;
 
-  //  public Timer time;
+
 
     public GameObject Timer;
 
@@ -18,6 +18,8 @@ public class Extraction : CollidableObject
     public LayerMask whatisPlayer;
 
     public float range = 1;
+
+    public bool checkStart = false;
     
 
 
@@ -26,15 +28,29 @@ public class Extraction : CollidableObject
     public CircleCollider2D circleCollider2D;
 
 
+
+
+ 
+
+
+
+
+
+   
+
+
     
 
 
 
     protected override void OnCollided(GameObject collidedObject)
     {
+                Debug.Log("????????????????????");
+
         if (Input.GetKey(KeyCode.E))
         {
             OnInteract();
+            Debug.Log("BYEE&&&&&&&&&&&&&&&&&&&");
         }
     }
 
@@ -46,6 +62,7 @@ public class Extraction : CollidableObject
             Debug.Log("INTERACT WITH " + name);
             EnemySpawner.SetActive(true);
             Timer.SetActive(true);
+            checkStart = true;
 
             
         } 
@@ -60,17 +77,29 @@ public class Extraction : CollidableObject
 
     void zoneChecker()
     {
-      //  Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, range);
-      //   foreach(Collider2D nearbyObject in colliders)
-       // {
-           
-        //    var play = nearbyObject.GetComponent<playerHealth>();
-          //  if (play == null)
-       //     {
-                
-        //    }
 
-       // }
+        if(Timer.activeSelf)
+        {
+          //  if(timeAmount.remainingTime <= 0)
+          //  {
+          //      Timer.SetActive(false);
+          //  }
+
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, range);
+            foreach(Collider2D nearbyObject in colliders)
+            {
+           
+                var play = nearbyObject.GetComponent<playerHealth>();
+                if (play != null)
+                {
+                    Debug.Log("player is in radius");
+                
+                }
+
+                
+
+            }
+        }
     }
 
 

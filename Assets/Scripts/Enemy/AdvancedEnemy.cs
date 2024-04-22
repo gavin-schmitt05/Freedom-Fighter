@@ -56,8 +56,8 @@ public class AdvancedEnemy : MonoBehaviour
     private void FixedUpdate()
     {
         
-          if (CanSeePlayer)
-           {
+         // if (CanSeePlayer)
+          // {
             
             if (TargetInDistance() && followEnabled)
             {
@@ -67,7 +67,7 @@ public class AdvancedEnemy : MonoBehaviour
                 //Debug.Log("I see");
                 //AstarPath.active.Scan();
             }
-           }
+          // }
 
         
     }
