@@ -9,6 +9,8 @@ public class Timer : MonoBehaviour
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] public float remainingTime;
 
+     public Extraction Extract;
+
     // Update is called once per frame
     void Update()
     {
@@ -20,6 +22,9 @@ public class Timer : MonoBehaviour
         else if (remainingTime < 0)
         {
             remainingTime = 0;
+            gameObject.SetActive(false);
+            Extract.z_Interacted = false;
+            Extract.EnemySpawner.SetActive(false);
         }
 
         int minutes = Mathf.FloorToInt(remainingTime / 60);

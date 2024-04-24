@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Extraction : CollidableObject
 {
-    private bool z_Interacted = false;
+    public bool z_Interacted = false;
 
     public GameObject EnemySpawner;
 
@@ -17,7 +17,7 @@ public class Extraction : CollidableObject
     public GameObject extractionZone;
     public LayerMask whatisPlayer;
 
-    public float range = 1;
+   // public float range = 1;
 
     public bool checkStart = false;
     
@@ -75,32 +75,32 @@ public class Extraction : CollidableObject
     }
 
 
-    void zoneChecker()
-    {
+ //   void zoneChecker()
+  //  {
 
-        if(Timer.activeSelf)
-        {
+    //    if(Timer.activeSelf)
+      //  {
           //  if(timeAmount.remainingTime <= 0)
           //  {
           //      Timer.SetActive(false);
           //  }
 
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, range);
-            foreach(Collider2D nearbyObject in colliders)
-            {
+        //    Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, range);
+          //  foreach(Collider2D nearbyObject in colliders)
+        //    {
            
-                var play = nearbyObject.GetComponent<playerHealth>();
-                if (play != null)
-                {
-                    Debug.Log("player is in radius");
+        //        var play = nearbyObject.GetComponent<playerHealth>();
+        //        if (play != null)
+        //        {
+        //            Debug.Log("player is in radius");
                 
-                }
+        //        }
 
                 
 
-            }
-        }
-    }
+        //    }
+    //    }
+ //   }
 
 
 
