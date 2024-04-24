@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class WeaponInventoryManager : MonoBehaviour
 {
-    //
 
     [SerializeField] public int maxStackedItems;
     public WeaponInventorySlot[] weaponInventorySlots;
     public GameObject weaponInventoryItemPrefab;
+    public GameObject gunSlot;
 
     /*public void Awake()
     {
@@ -22,7 +22,7 @@ public class WeaponInventoryManager : MonoBehaviour
         {
             WeaponInventorySlot slot = weaponInventorySlots[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
-            if (itemInSlot != null && itemInSlot.item == item && itemInSlot.count < maxStackedItems && itemInSlot.item.stackable == true)
+            if (itemInSlot != null && itemInSlot.item == item && itemInSlot.count < itemInSlot.item.maxStackOfItem && itemInSlot.item.stackable == true)
             {
                 itemInSlot.count++;
                 itemInSlot.RefreshCount();
@@ -50,5 +50,26 @@ public class WeaponInventoryManager : MonoBehaviour
         GameObject newItemGo = Instantiate(weaponInventoryItemPrefab, slot.transform);
         InventoryItem inventoryItem = newItemGo.GetComponent<InventoryItem>();
         inventoryItem.InitialiseItem(item);
+    }
+
+    public void RemoveGun()
+    {
+        Debug.Log("Started remove gun");
+         for (int i = 0; i < weaponInventorySlots.Length; i++)
+        {
+            WeaponInventorySlot slot = weaponInventorySlots[i];
+            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+            if (itemInSlot == null )
+            {
+                itemInSlot.count--;
+                itemInSlot.RefreshCount();
+                Debug.Log("Before Destroy");
+                foreach (Transform child in gunSlot.transform)
+                {
+                Destroy(gunSlot.gameObject);
+                Debug.Log("Destroyyyy");
+                }
+            }
+        }
     }
 }

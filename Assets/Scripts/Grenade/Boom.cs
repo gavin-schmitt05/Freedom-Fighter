@@ -25,6 +25,7 @@ public class Boom : MonoBehaviour
         // AstarPath.active.Scan();
         explosionDistanceGo.SetActive(false);
         StartCoroutine(Booom());
+        Debug.Log("Played Boom Script");
         
         // yield return new WaitForSeconds(4f);
         //AstarPath.active.Scan();
@@ -56,7 +57,7 @@ public class Boom : MonoBehaviour
     {
 
         yield return new WaitForSeconds(3.1f);
-        AstarPath.active.Scan();
+        //AstarPath.active.Scan();
         Debug.Log("PLEASE WORK PRETTY PLEASE---------------->");
 
 
@@ -89,6 +90,7 @@ public class Boom : MonoBehaviour
                         {
                             overColl.GetComponent<Ground>().MakeDot(checkCellPos);
                           //  AstarPath.active.Scan();
+                          Debug.Log("Played for each boom statement");
                             
                         }
 

@@ -22,11 +22,12 @@ public class Shooting : MonoBehaviour
     float ReadyForShot;
     public float direction = 0f;
     public playerHealth pHealth;
+    //public GameObject Inventory;
 
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Awake(){
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -55,16 +56,18 @@ public class Shooting : MonoBehaviour
         {
             if (Current > 0)
             {
-
-                if (Input.GetMouseButton(0))
-                {
-                    if (Time.time > ReadyForShot)
+                //if()
+                //{
+                    if (Input.GetMouseButton(0))
                     {
-                        ReadyForShot = Time.time + 1 / FireRate;
-                        shoot();
-                    }
+                        if (Time.time > ReadyForShot)
+                        {
+                            ReadyForShot = Time.time + 1 / FireRate;
+                            shoot();
+                        }
 
-                }
+                    }
+                //}
             }
         }
 
