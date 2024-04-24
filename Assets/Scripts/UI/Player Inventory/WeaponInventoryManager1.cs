@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponInventoryManager : MonoBehaviour
+public class WeaponInventoryManager1 : MonoBehaviour
 {
 
     [SerializeField] public int maxStackedItems;
-    public WeaponInventorySlot[] weaponInventorySlots;
+    public WeaponInventorySlot1[] weaponInventorySlots1;
     public GameObject weaponInventoryItemPrefab;
     public GameObject gunSlot;
 
@@ -18,9 +18,9 @@ public class WeaponInventoryManager : MonoBehaviour
     public bool AddItem(Item item)
     {
         // Check if any slot has an item with count lower than max
-        for (int i = 0; i < weaponInventorySlots.Length; i++)
+        for (int i = 0; i < weaponInventorySlots1.Length; i++)
         {
-            WeaponInventorySlot slot = weaponInventorySlots[i];
+            WeaponInventorySlot1 slot = weaponInventorySlots1[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
             if (itemInSlot != null && itemInSlot.item == item && itemInSlot.count < itemInSlot.item.maxStackOfItem && itemInSlot.item.stackable == true)
             {
@@ -31,9 +31,9 @@ public class WeaponInventoryManager : MonoBehaviour
         }
 
         // Find any empty slot
-        for (int i = 0; i < weaponInventorySlots.Length; i++)
+        for (int i = 0; i < weaponInventorySlots1.Length; i++)
         {
-            WeaponInventorySlot slot = weaponInventorySlots[i];
+            WeaponInventorySlot1 slot = weaponInventorySlots1[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
             if (itemInSlot == null)
             {
@@ -45,31 +45,10 @@ public class WeaponInventoryManager : MonoBehaviour
         return false;
     }
 
-    void SpawnNewItem(Item item, WeaponInventorySlot slot)
+    void SpawnNewItem(Item item, WeaponInventorySlot1 slot)
     {
         GameObject newItemGo = Instantiate(weaponInventoryItemPrefab, slot.transform);
         InventoryItem inventoryItem = newItemGo.GetComponent<InventoryItem>();
         inventoryItem.InitialiseItem(item);
-    }
-
-    public void RemoveGun()
-    {
-        Debug.Log("Started remove gun");
-         for (int i = 0; i < weaponInventorySlots.Length; i++)
-        {
-            WeaponInventorySlot slot = weaponInventorySlots[i];
-            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
-            if (itemInSlot == null )
-            {
-                itemInSlot.count--;
-                itemInSlot.RefreshCount();
-                Debug.Log("Before Destroy");
-                foreach (Transform child in gunSlot.transform)
-                {
-                Destroy(gunSlot.gameObject);
-                Debug.Log("Destroyyyy");
-                }
-            }
-        }
     }
 }

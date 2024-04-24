@@ -135,7 +135,7 @@ MonoBehaviour:
   Current: 30
   Bullet: {fileID: 5565813430887369256, guid: 665ed2502e85a9148a7bc03469fa7eea, type: 3}
   rb: {fileID: 0}
-  player: {fileID: 5719263274197723971, guid: 529ec9aacea6f43e1be37f1a95acb8d3, type: 3}
+  player: {fileID: 8393465690352775736, guid: c00717aea67ea4948a7942887f766fe5, type: 3}
   audioSource: {fileID: 0}
   shootingAudioClip: {fileID: 0}
   ShootPoint: {fileID: 9212634495173415115}
