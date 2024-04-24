@@ -41,6 +41,8 @@ GameObject:
   m_Component:
   - component: {fileID: 130312342836922692}
   - component: {fileID: 5877872226398464961}
+  - component: {fileID: 6411553933248013213}
+  - component: {fileID: -5681780212619350218}
   m_Layer: 0
   m_Name: AK
   m_TagString: Untagged
@@ -116,3 +118,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6411553933248013213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450340186380675925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e1cd74aaaacc5b49838000defbe6251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoCount: {fileID: 6148919330714740201, guid: 63f19a4adc15a8c47885e6c62b6c591d, type: 3}
+  Max: 30
+  Current: 30
+  Bullet: {fileID: 5565813430887369256, guid: 665ed2502e85a9148a7bc03469fa7eea, type: 3}
+  rb: {fileID: 0}
+  player: {fileID: 8393465690352775736, guid: c00717aea67ea4948a7942887f766fe5, type: 3}
+  audioSource: {fileID: 0}
+  shootingAudioClip: {fileID: 0}
+  ShootPoint: {fileID: 9212634495173415115}
+  FireRate: 10
+  direction: 0
+  pHealth: {fileID: 5719263274197723962, guid: 529ec9aacea6f43e1be37f1a95acb8d3, type: 3}
+--- !u!114 &-5681780212619350218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450340186380675925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7386e8e54440794caa57906b0cf4415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 7861873021322306772, guid: 63f19a4adc15a8c47885e6c62b6c591d, type: 3}

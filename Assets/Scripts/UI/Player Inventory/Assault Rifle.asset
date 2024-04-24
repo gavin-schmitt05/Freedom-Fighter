@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   actionType: 0
+  itemPrefab: {fileID: 7615908811750458679, guid: 47eb67473c6c92141aebcdb0277125af, type: 3}
   range: {x: 5, y: 4}
   stackable: 0
+  isGun: 1
+  maxStackOfItem: 0
   image: {fileID: 1634422633, guid: c992765067ec27446b435027c4a33dde, type: 3}
