@@ -24,11 +24,15 @@ public class GrenadeThrow : MonoBehaviour
     {
         if (pHealth.health > 0)
         {
-            if (Input.GetButtonDown("Grenade"))
+            if (GrenadeCounter.instance.currentGrenade > 0)
             {
+                if (Input.GetButtonDown("Grenade"))
+                {
                 
-                Instantiate(Grenade, ShootPoint.position, ShootPoint.rotation);
-                Collider2D overCollider2d = Physics2D.OverlapCircle(GrenadePosition, 0.1f, whatisPlatform);
+                    Instantiate(Grenade, ShootPoint.position, ShootPoint.rotation);
+                    Collider2D overCollider2d = Physics2D.OverlapCircle(GrenadePosition, 0.1f, whatisPlatform);
+                    GrenadeCounter.instance.DecreaseCount(1);
+                }
             }
         }
     }
