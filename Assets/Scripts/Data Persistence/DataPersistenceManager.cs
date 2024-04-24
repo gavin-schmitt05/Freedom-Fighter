@@ -6,6 +6,9 @@ using System.Linq;
 
 public class DataPersistenceManager : MonoBehaviour
 {
+    [Header("Debugging")]
+    [SerializeField] private bool initializeDataIfNull = false;
+
     [Header("File Storage Config")]
     [SerializeField] private string fileName;
 
@@ -19,7 +22,7 @@ public class DataPersistenceManager : MonoBehaviour
     { 
         if (instance != null)
         {
-            Debug.LogWarning("Found more than one data persistence manager, destroying newest one");
+            Debug.LogWarning("Found more than one Data Persistence Manager, destroying newest one");
             Destroy(this.gameObject);
             return;
         }
@@ -28,7 +31,7 @@ public class DataPersistenceManager : MonoBehaviour
 
         this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
     }
-    
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -49,10 +52,10 @@ public class DataPersistenceManager : MonoBehaviour
     public void OnSceneUnloaded(Scene scene)
     {
         Debug.Log("Scene Unloaded");
-        //SaveGame();
+        SaveGame();
     }
 
-   /*temp remove after demo obsolete once above code functions
+   /*temp; remove after demo, obsolete once above code functions
    void Start()
    {
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
@@ -62,6 +65,7 @@ public class DataPersistenceManager : MonoBehaviour
     public void NewGame() 
     {
         this.gameData = new GameData();
+        SaveGame();
     }
 
     public void LoadGame() 
@@ -69,11 +73,16 @@ public class DataPersistenceManager : MonoBehaviour
         //load saved data
         this.gameData = dataHandler.Load();
 
+        if (this.gameData == null && initializeDataIfNull)
+        {
+            NewGame();
+        }
+
         //if no data initalize new game
         if(this.gameData == null)
         {
             Debug.Log("No data was found. Initializing new game");
-            NewGame();
+            return;
         }
 
         //push loaded data
@@ -105,5 +114,10 @@ public class DataPersistenceManager : MonoBehaviour
             .OfType<IDataPersistence>();
 
         return new List<IDataPersistence>(dataPersistenceObjects);
+    }
+
+    public bool HasGameData()
+    {
+        return gameData != null;
     }
 }

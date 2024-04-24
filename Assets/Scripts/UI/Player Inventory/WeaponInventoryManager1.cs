@@ -2,35 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryManager : MonoBehaviour, IDataPersistence
+public class WeaponInventoryManager1 : MonoBehaviour
 {
-    public static InventoryManager instance;
 
     [SerializeField] public int maxStackedItems;
-    public InventorySlot[] inventorySlots;
-    public GameObject inventoryItemPrefab;
+    public WeaponInventorySlot1[] weaponInventorySlots1;
+    public GameObject weaponInventoryItemPrefab;
+    public GameObject gunSlot;
 
-    public void Awake()
+    /*public void Awake()
     {
         instance = this;
-    }
-
-    public void LoadData(GameData data)
-    {
-
-    }
-
-    public void SaveData(GameData data)
-    {
-
-    }
+    }*/
 
     public bool AddItem(Item item)
     {
         // Check if any slot has an item with count lower than max
-        for (int i = 0; i < inventorySlots.Length; i++)
+        for (int i = 0; i < weaponInventorySlots1.Length; i++)
         {
-            InventorySlot slot = inventorySlots[i];
+            WeaponInventorySlot1 slot = weaponInventorySlots1[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
             if (itemInSlot != null && itemInSlot.item == item && itemInSlot.count < itemInSlot.item.maxStackOfItem && itemInSlot.item.stackable == true)
             {
@@ -41,11 +31,11 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
         }
 
         // Find any empty slot
-        for (int i = 0; i < inventorySlots.Length; i++)
+        for (int i = 0; i < weaponInventorySlots1.Length; i++)
         {
-            InventorySlot slot = inventorySlots[i];
+            WeaponInventorySlot1 slot = weaponInventorySlots1[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
-            if(itemInSlot == null)
+            if (itemInSlot == null)
             {
                 SpawnNewItem(item, slot);
                 return true;
@@ -55,9 +45,9 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
         return false;
     }
 
-    void SpawnNewItem(Item item, InventorySlot slot)
+    void SpawnNewItem(Item item, WeaponInventorySlot1 slot)
     {
-        GameObject newItemGo = Instantiate(inventoryItemPrefab, slot.transform);
+        GameObject newItemGo = Instantiate(weaponInventoryItemPrefab, slot.transform);
         InventoryItem inventoryItem = newItemGo.GetComponent<InventoryItem>();
         inventoryItem.InitialiseItem(item);
     }

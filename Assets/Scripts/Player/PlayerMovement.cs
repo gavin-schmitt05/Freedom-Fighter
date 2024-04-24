@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     public LayerMask groundLayer;
     public bool isTouchingGround;
     public Animator animator;
-    bool jump = false;
+    public bool jump = false;
     public playerHealth pHealth;
     private GameObject gun;
 
@@ -111,6 +111,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         LevelManager.instance.GameOver();
         gameObject.SetActive(false);
         GetComponent<PlayerMovement>().enabled = false;
+        //DataPersistenceManager.instance.NewGame();
     }
 
 }
