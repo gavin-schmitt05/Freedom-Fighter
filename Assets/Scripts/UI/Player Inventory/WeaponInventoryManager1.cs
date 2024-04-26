@@ -9,11 +9,12 @@ public class WeaponInventoryManager1 : MonoBehaviour
     public WeaponInventorySlot1[] weaponInventorySlots1;
     public GameObject weaponInventoryItemPrefab;
     public GameObject gunSlot;
+    public static WeaponInventoryManager1 instance;
 
-    /*public void Awake()
+    public void Awake()
     {
         instance = this;
-    }*/
+    }
 
     public bool AddItem(Item item)
     {
@@ -50,5 +51,24 @@ public class WeaponInventoryManager1 : MonoBehaviour
         GameObject newItemGo = Instantiate(weaponInventoryItemPrefab, slot.transform);
         InventoryItem inventoryItem = newItemGo.GetComponent<InventoryItem>();
         inventoryItem.InitialiseItem(item);
+    }
+
+    public void RemoveGun()
+    {
+        Debug.Log("Started remove gun");
+         for (int i = 0; i < weaponInventorySlots1.Length; i++)
+        {
+            WeaponInventorySlot1 slot = weaponInventorySlots1[i];
+            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+            if (itemInSlot == null )
+            {
+                Debug.Log("Before Destroy");
+                foreach (Transform child in gunSlot.transform)
+                {
+                Destroy(child.gameObject);
+                Debug.Log("Destroyyyy");
+                }
+            }
+        }
     }
 }
