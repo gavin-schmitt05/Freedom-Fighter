@@ -29,7 +29,7 @@ public class GrenadeThrow : MonoBehaviour
     {
         if (pHealth.health > 0)
         {
-            if (GrenadeCounter.instance.currentGrenade > 0)
+            if (Input.GetKeyDown("g"))
             {
                 for (int i = 0; i < inventorySlots.Length; i++)
                 {
@@ -39,12 +39,12 @@ public class GrenadeThrow : MonoBehaviour
                     if (itemInSlot != null && itemInSlot.item == itemRefrence)
                     {
                         itemInSlot.count--;
-                        if(itemInSlot.count <= 0){
+                        if(itemInSlot.count <= 0)
+                        {
                             Destroy(itemInSlot.gameObject);
                         }
                         itemInSlot.RefreshCount();
-                        Instantiate(Grenade, ShootPoint.position, ShootPoint.rotation);
-                        Collider2D overCollider2d = Physics2D.OverlapCircle(GrenadePosition, 0.1f, whatisPlatform);
+                        Instantiate(Grenade, ShootPoint.position, ShootPoint.rotation);                        Collider2D overCollider2d = Physics2D.OverlapCircle(GrenadePosition, 0.1f, whatisPlatform);
                         Debug.Log("Instantiated Grenade");
                         break;
                     }
