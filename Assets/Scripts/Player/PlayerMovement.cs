@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class PlayerMovement : MonoBehaviour, IDataPersistence
 {
@@ -10,7 +11,6 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     private float direction = 0f;
     public float jumpSpeed = 8f;
     private Rigidbody2D player;
-    
 
     public Transform groundCheck;
     public float groundCheckRadius;

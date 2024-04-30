@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cb5e6531dff064546b5af9f7741aa5f1
+guid: 616abbd788234534e9b1a340bb801d3e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MechIdle_0
+      name: AMERICANFlag_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 200
-        width: 100
-        height: 100
+        y: 300
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f36854f8c941e48458768d20271e6168
-      internalID: -996122788
+      spriteID: f56e13117acf6794a9a3593ce93dfd7d
+      internalID: 1793412472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MechIdle_1
+      name: AMERICANFlag_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 200
-        width: 100
-        height: 100
+        x: 300
+        y: 300
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,62 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3a97db28c67bbd47b7b5d9dceca25da
-      internalID: 1071891872
+      spriteID: be3404c1e1e7efd489c564b4a8230880
+      internalID: 306438507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MechIdle_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 100
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ae7b3354adf5634985d45b1d8e4d43a
-      internalID: -1544084759
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MechIdle_3
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 100
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7436aa10e05acc40bdc007bd454f6bb
-      internalID: -1578324449
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MechIdle_4
+      name: AMERICANFlag_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4375b0ec88fbcbc42852c0402c689271
-      internalID: 1962432868
+      spriteID: 9bc21fc3718b42545b20874842beb185
+      internalID: 1387301207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MechIdle_5
+      name: AMERICANFlag_3
       rect:
         serializedVersion: 2
-        x: 100
+        x: 300
         y: 0
-        width: 100
-        height: 100
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32181f10a52776d4a84469ee8ec70a8b
-      internalID: 1444530111
+      spriteID: a890f4692bc84fa46bb3bd2737940f09
+      internalID: 2065200637
       vertices: []
       indices: 
       edges: []
@@ -241,12 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MechIdle_2: -1544084759
-      MechIdle_3: -1578324449
-      MechIdle_1: 1071891872
-      MechIdle_4: 1962432868
-      MechIdle_0: -996122788
-      MechIdle_5: 1444530111
+      AMERICANFlag_3: 2065200637
+      AMERICANFlag_0: 1793412472
+      AMERICANFlag_2: 1387301207
+      AMERICANFlag_1: 306438507
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

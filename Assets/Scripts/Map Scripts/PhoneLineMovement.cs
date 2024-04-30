@@ -26,7 +26,7 @@ public class PhoneLineMovement : MonoBehaviour
         if (isClimbing)
         {
             rb.gravityScale = 0f;
-            rb.velocity = new Vector2(rb.velocity.y, horizontal * speed);
+            rb.velocity = new Vector2(rb.velocity.x, horizontal * speed);
         }
         else
         {
