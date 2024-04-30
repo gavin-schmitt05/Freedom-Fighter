@@ -12,6 +12,7 @@ TagManager:
   - Grenade
   - Ground
   - PhoneLine
+  - ExtractionZone
   layers:
   - Default
   - TransparentFX

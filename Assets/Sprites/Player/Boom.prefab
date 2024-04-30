@@ -141,7 +141,7 @@ MonoBehaviour:
   explosionDistanceGo: {fileID: 3455546688359194848}
   whatisPlatform:
     serializedVersion: 2
-    m_Bits: 19136
+    m_Bits: 64
   circleCollider2D: {fileID: 716734881372262701}
   enemySprite: {fileID: 14611255512050464, guid: 393cf7ff81bd49448a9a42ecc5bc167b, type: 3}
   SplashRange: 1
