@@ -212,7 +212,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   Enemy: {fileID: 983400769509486375}
   FirePoint: {fileID: 626548494578784723}
-  FireRate: 4
+  FireRate: 3
   direction: 0
   colliderDistance: 0.2249
   boxCollider: {fileID: 983400769509486383}
