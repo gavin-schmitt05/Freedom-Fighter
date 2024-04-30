@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6762440138122657904}
   - component: {fileID: 4626517450647527526}
+  - component: {fileID: 6535460434567909359}
   m_Layer: 0
   m_Name: MechGun
   m_TagString: Untagged
@@ -28,7 +29,8 @@ Transform:
   m_LocalPosition: {x: -0.468, y: 0.469, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4293145488137229555}
   m_Father: {fileID: 1466691619722503086}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -84,6 +86,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6535460434567909359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786344296522653763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb22122c60d4b4bc7948570995aa05f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mechBody: {fileID: 1466691619722503072}
+  Bullet: {fileID: 5862578332036104348, guid: cde3368bd2fa948a8913a828f2273c1e, type: 3}
+  rb: {fileID: 0}
+  ShootPoint: {fileID: 4293145488137229555}
+  FireRate: 3
+  direction: 0
 --- !u!1 &1466691619412140902
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,8 +461,9 @@ MonoBehaviour:
   speed: 1
   jumpSpeed: 5
   Entrance: {fileID: 1466691619722503074}
-  playerIsDisabled: 0
+  playerEnteredMech: 0
   mechTransform: {fileID: 1466691619722503086}
+  playerTransform: {x: 0, y: 0, z: 0}
   groundCheck: {fileID: 1466691619412140897}
   groundCheckRadius: 0.2
   groundLayer:
@@ -471,6 +492,37 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &3999306757179397666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4293145488137229555}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4293145488137229555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3999306757179397666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6762440138122657904}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5579293198319427004
 GameObject:
   m_ObjectHideFlags: 0
