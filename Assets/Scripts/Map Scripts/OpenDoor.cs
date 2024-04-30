@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OpenDoor : MonoBehaviour
 {
-    
+    public Sprite opened;
     void Start()
     {
         
@@ -20,7 +20,7 @@ public class OpenDoor : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(gameObject);
+            gameObject.GetComponent<SpriteRenderer>().sprite = opened;
         }
     }
        
