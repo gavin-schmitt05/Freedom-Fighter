@@ -24,12 +24,16 @@ public class MainMenu : MonoBehaviour
         DataPersistenceManager.instance.NewGame();
 
         SceneManager.LoadSceneAsync("LucianScene");
+        //implement once main menu isnt needed for testing
+        //SceneManager.LoadSceneAsync("LoadingScene");
     }
 
     public void OnContinueClicked()
     {
         DisableMenuButtons();
         SceneManager.LoadSceneAsync("LucianScene");
+        //implement once main menu isnt needed for testing
+        //SceneManager.LoadSceneAsync("LoadingScene");
     }
 
     private void DisableMenuButtons()
