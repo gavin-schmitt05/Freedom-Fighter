@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 92f86e950ad772e469e0e39e23980107
+guid: efdd1a68601a07e45ae2b482146f992f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MechWalk_0
+      name: MechWalking_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 200
-        width: 100
-        height: 100
+        y: 600
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2ef1f733b043b5419ae0b45c7aa2106
-      internalID: -775874400
+      spriteID: 5e56135bd2cdad742a8f27a4a32ccbc6
+      internalID: 2058446876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MechWalk_1
+      name: MechWalking_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 200
-        width: 100
-        height: 100
+        x: 300
+        y: 600
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a86a5eaffb6b4345affd6a85adaeddb
-      internalID: 416246875
+      spriteID: e59c02ea92c8b644d8b79b3ffb37b15b
+      internalID: -1701692951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MechWalk_2
+      name: MechWalking_2
       rect:
         serializedVersion: 2
-        x: 200
-        y: 200
-        width: 100
-        height: 100
+        x: 600
+        y: 600
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cf14798d2927e54586ef7f5f3a4ec32
-      internalID: -1903515482
+      spriteID: 7ba31b994e26fff4d935e422052a5887
+      internalID: -156681930
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MechWalk_3
+      name: MechWalking_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 100
-        width: 100
-        height: 100
+        y: 300
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0644d2683ffc39941a613e26a235e391
-      internalID: 904164084
+      spriteID: be91681490b5606479e81793adf81c94
+      internalID: 2079382335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MechWalk_4
+      name: MechWalking_4
       rect:
         serializedVersion: 2
-        x: 100
-        y: 100
-        width: 100
-        height: 100
+        x: 300
+        y: 300
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e367aed1ebcddf4f80809619fa00808
-      internalID: 1687075200
+      spriteID: 1859ae85321acf74e948aa71c6b280d2
+      internalID: -836108732
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MechWalk_5
+      name: MechWalking_5
       rect:
         serializedVersion: 2
-        x: 200
-        y: 100
-        width: 100
-        height: 100
+        x: 600
+        y: 300
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9d51e1b69183bc449b2afabb71ef140
-      internalID: 1240880726
+      spriteID: f0c17302345ea6947a6672d386713f0c
+      internalID: 1204469139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MechWalk_6
+      name: MechWalking_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,8 +245,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dd6b805b500afa4397d91fb4176c60b
-      internalID: 1432723902
+      spriteID: 0b153e8a21a4695479a38d8086cd2879
+      internalID: -1160844575
       vertices: []
       indices: 
       edges: []
@@ -262,13 +262,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MechWalk_5: 1240880726
-      MechWalk_0: -775874400
-      MechWalk_4: 1687075200
-      MechWalk_2: -1903515482
-      MechWalk_3: 904164084
-      MechWalk_1: 416246875
-      MechWalk_6: 1432723902
+      MechWalking_3: 2079382335
+      MechWalking_4: -836108732
+      MechWalking_0: 2058446876
+      MechWalking_1: -1701692951
+      MechWalking_5: 1204469139
+      MechWalking_6: -1160844575
+      MechWalking_2: -156681930
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

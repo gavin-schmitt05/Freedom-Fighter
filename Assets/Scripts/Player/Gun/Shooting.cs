@@ -56,18 +56,15 @@ public class Shooting : MonoBehaviour
         {
             if (Current > 0)
             {
-                //if()
-                //{
-                    if (Input.GetMouseButton(0))
+                if (Input.GetMouseButton(0))
+                {
+                    if (Time.time > ReadyForShot)
                     {
-                        if (Time.time > ReadyForShot)
-                        {
-                            ReadyForShot = Time.time + 1 / FireRate;
-                            shoot();
-                        }
-
+                        ReadyForShot = Time.time + 1 / FireRate;
+                        shoot();
                     }
-                //}
+
+                }
             }
         }
 

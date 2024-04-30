@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    public static CameraController instance;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        instance = this;
     }
-    [SerializeField] private Transform player;
+    [SerializeField] private Transform objectToFollow;
 
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(player.position.x, player.position.y, transform.position.z);
+        transform.position = new Vector3(objectToFollow.position.x, objectToFollow.position.y, transform.position.z);
+    }
+
+    public void changeCamera(Transform transformObject)
+    {
+        objectToFollow = transformObject;
     }
 }
