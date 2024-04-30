@@ -14,11 +14,12 @@ public class MechControl : MonoBehaviour
     //Added to mech script
     [HideInInspector] private GameObject Player;
     [SerializeField] private BoxCollider2D Entrance;
-    [HideInInspector] public bool playerIsDisabled = false;
-    private bool inEntrance = false;
+    [HideInInspector] public bool playerEnteredMech = false;
+    private bool playerInEntrance = false;
     public Transform mechTransform;
+    public Vector3 playerTransform;
 
-
+    
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask groundLayer;
@@ -26,7 +27,7 @@ public class MechControl : MonoBehaviour
     public Animator animator;
     public bool jump = false;
     //public playerHealth pHealth;
-    private GameObject gun;
+    //private GameObject gun;
 
 
     // Start is called before the first frame update
@@ -34,19 +35,27 @@ public class MechControl : MonoBehaviour
     {
         mech = GetComponent<Rigidbody2D>();
         Player = GameObject.Find("Player");
+
     }
 
     void Update()
     {
-        if (inEntrance && Entrance != null)
+        if (playerInEntrance)
         {
-            if (Input.GetKeyDown(KeyCode.Alpha2))
+            if (Input.GetKeyDown(KeyCode.Alpha2) && playerEnteredMech == true)
+            {
+                Player.transform.position = Entrance.bounds.center;
+                Player.SetActive(true);
+                playerEnteredMech = false;
+                CameraController.instance.changeCamera(Player.transform);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 Player.SetActive(false);
-                playerIsDisabled = true;
+                playerEnteredMech = true;
                 CameraController.instance.changeCamera(mechTransform);
             }
-            if (playerIsDisabled == true)
+            if (playerEnteredMech == true)
             {
                 isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
@@ -71,31 +80,22 @@ public class MechControl : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3) && playerIsDisabled == true)
-        {
-            Player.SetActive(true);
-            playerIsDisabled = false;
-            inEntrance = false;
-            CameraController.instance.changeCamera(Player.transform);
-        }
     }
         
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Collider2D col = collision.gameObject.GetComponent<Collider2D>();
-        if (col.gameObject == Player)
+        if (collision.gameObject == Player)
         {
-            inEntrance = true;
+            playerInEntrance = true;
         }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        Collider2D col = collision.gameObject.GetComponent<Collider2D>();
-        if (col.gameObject == Player)
+        if (collision.gameObject == Player && Player.activeInHierarchy == true)
         {
-            inEntrance = false;
+            playerInEntrance = false;
         }
     }
 }

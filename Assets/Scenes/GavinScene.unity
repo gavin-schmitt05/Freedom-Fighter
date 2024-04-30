@@ -14402,6 +14402,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 786344296522653763, guid: 6ca16b46cad4bfa4cb850bada59a15a8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1164807398301740396, guid: 6ca16b46cad4bfa4cb850bada59a15a8, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -14409,6 +14413,14 @@ PrefabInstance:
     - target: {fileID: 1466691619722503072, guid: 6ca16b46cad4bfa4cb850bada59a15a8, type: 3}
       propertyPath: m_Name
       value: Mech
+      objectReference: {fileID: 0}
+    - target: {fileID: 1466691619722503074, guid: 6ca16b46cad4bfa4cb850bada59a15a8, type: 3}
+      propertyPath: m_Size.x
+      value: 0.79595184
+      objectReference: {fileID: 0}
+    - target: {fileID: 1466691619722503074, guid: 6ca16b46cad4bfa4cb850bada59a15a8, type: 3}
+      propertyPath: m_Offset.x
+      value: 1.2925663
       objectReference: {fileID: 0}
     - target: {fileID: 1466691619722503074, guid: 6ca16b46cad4bfa4cb850bada59a15a8, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
@@ -14472,7 +14484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1466691619722503087, guid: 6ca16b46cad4bfa4cb850bada59a15a8, type: 3}
       propertyPath: m_Size.x
-      value: 9.375
+      value: 6.25
       objectReference: {fileID: 0}
     - target: {fileID: 1466691619722503087, guid: 6ca16b46cad4bfa4cb850bada59a15a8, type: 3}
       propertyPath: m_Size.y
@@ -14481,7 +14493,7 @@ PrefabInstance:
     - target: {fileID: 1466691619722503087, guid: 6ca16b46cad4bfa4cb850bada59a15a8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1956543843, guid: 14891f27d9f8a4947a169c19ffd82675, type: 3}
+      objectReference: {fileID: -2056576559, guid: 0414918e6ac60374f8fbade4c0192689, type: 3}
     - target: {fileID: 1466691619722503087, guid: 6ca16b46cad4bfa4cb850bada59a15a8, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1

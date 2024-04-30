@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cb5e6531dff064546b5af9f7741aa5f1
+guid: 0414918e6ac60374f8fbade4c0192689
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -109,9 +109,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 200
-        width: 100
-        height: 100
+        y: 300
+        width: 200
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f36854f8c941e48458768d20271e6168
-      internalID: -996122788
+      spriteID: db597e0b2e1764045849df933a5e1b92
+      internalID: -2056576559
       vertices: []
       indices: 
       edges: []
@@ -129,10 +129,10 @@ TextureImporter:
       name: MechIdle_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 200
-        width: 100
-        height: 100
+        x: 200
+        y: 300
+        width: 200
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3a97db28c67bbd47b7b5d9dceca25da
-      internalID: 1071891872
+      spriteID: 5edd2df9059c13b459260baa03edb3c5
+      internalID: -42393416
       vertices: []
       indices: 
       edges: []
@@ -150,10 +150,10 @@ TextureImporter:
       name: MechIdle_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 100
-        width: 100
-        height: 100
+        x: 400
+        y: 300
+        width: 200
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ae7b3354adf5634985d45b1d8e4d43a
-      internalID: -1544084759
+      spriteID: 2f5cc372d53cf6843877a3bccab495a6
+      internalID: 1635632292
       vertices: []
       indices: 
       edges: []
@@ -171,10 +171,10 @@ TextureImporter:
       name: MechIdle_3
       rect:
         serializedVersion: 2
-        x: 100
-        y: 100
-        width: 100
-        height: 100
+        x: 0
+        y: 0
+        width: 200
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7436aa10e05acc40bdc007bd454f6bb
-      internalID: -1578324449
+      spriteID: dd5c58f9792c2f949bad684aa575a5aa
+      internalID: -362161159
       vertices: []
       indices: 
       edges: []
@@ -192,10 +192,10 @@ TextureImporter:
       name: MechIdle_4
       rect:
         serializedVersion: 2
-        x: 0
+        x: 200
         y: 0
-        width: 100
-        height: 100
+        width: 200
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4375b0ec88fbcbc42852c0402c689271
-      internalID: 1962432868
+      spriteID: b4b61d52c5d99804da4a3a18d7f57483
+      internalID: 1340084847
       vertices: []
       indices: 
       edges: []
@@ -213,10 +213,10 @@ TextureImporter:
       name: MechIdle_5
       rect:
         serializedVersion: 2
-        x: 100
+        x: 400
         y: 0
-        width: 100
-        height: 100
+        width: 200
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32181f10a52776d4a84469ee8ec70a8b
-      internalID: 1444530111
+      spriteID: 2a767de64d778f045acfc7ec907f01b4
+      internalID: -1907713890
       vertices: []
       indices: 
       edges: []
@@ -241,12 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MechIdle_2: -1544084759
-      MechIdle_3: -1578324449
-      MechIdle_1: 1071891872
-      MechIdle_4: 1962432868
-      MechIdle_0: -996122788
-      MechIdle_5: 1444530111
+      MechIdle_2: 1635632292
+      MechIdle_3: -362161159
+      MechIdle_1: -42393416
+      MechIdle_4: 1340084847
+      MechIdle_0: -2056576559
+      MechIdle_5: -1907713890
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
