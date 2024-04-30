@@ -38,10 +38,17 @@ public class GrenadeThrow : MonoBehaviour
 
         if (pHealth.health > 0)
         {
-           // if (GrenadeCounter.instance.currentGrenade > 0)
-           // {
-            if (Input.GetButtonDown("Grenade"))
+            if(Input.GetButtonDown("Grenade"))
             {
+                Player = GameObject.Find("Player");
+                if (Player.transform.localScale == new Vector3(1, 1, 1))
+                {
+                    ShootPoint.transform.eulerAngles = new Vector3(0, 0, 0);
+                }
+                else if (Player.transform.localScale == new Vector3(-1, 1, 1))
+                {
+                    ShootPoint.transform.eulerAngles = new Vector3(0, 180, 0);
+                }
                 for (int i = 0; i < inventorySlots.Length; i++)
                 {
                     InventorySlot slot = inventorySlots[i];
@@ -64,6 +71,7 @@ public class GrenadeThrow : MonoBehaviour
                 
           //  }
         }
+            
     }
 }
 

@@ -92,11 +92,11 @@ public class Boom : MonoBehaviour
                 float distance = Vector2.Distance(transform.position, checkCellPos) - 0.001f;
                 if (distance <= radiusInt)
                 {
-                    //    Collider2D overCollider2d = Physics2D.OverlapCircle(checkCellPos, 0.01f, whatisPlatform);
-                    //     if (overCollider2d != null)
-                    //    {
-                    //         overCollider2d.transform.GetComponent<Ground>().MakeDot(checkCellPos);
-                    //      }
+                    /*Collider2D overCollider2d = Physics2D.OverlapCircle(checkCellPos, 0.01f, whatisPlatform);
+                    if (overCollider2d != null)
+                    {
+                        overCollider2d.transform.GetComponent<Ground>().MakeDot(checkCellPos);
+                    }*/
 
                     Collider2D[] overCollider2d = Physics2D.OverlapCircleAll(checkCellPos, 0.01f, whatisPlatform);
                     if (overCollider2d.Length > 0)

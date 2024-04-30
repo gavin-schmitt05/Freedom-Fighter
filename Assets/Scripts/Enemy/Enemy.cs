@@ -52,22 +52,18 @@ public class Enemy : MonoBehaviour
 
         if (percentagePicker >= 1 && percentagePicker <= 50)
         {
-            Debug.Log("Spawning assualt rifle");
             itemSpawning = 0;
         }
         else if (percentagePicker >= 51 && percentagePicker <= 75)
         {
-            Debug.Log("Spawning coin");
             itemSpawning = 1;
         }
         else if (percentagePicker >= 76 && percentagePicker <= 88)
         {
-            Debug.Log("Spawning grenade");
             itemSpawning = 2;
         }
         else if (percentagePicker >= 89 && percentagePicker <= 100)
         {
-            Debug.Log("You got nothing lol");
             itemSpawning = 3;
         }
         
