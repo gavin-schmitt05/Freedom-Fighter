@@ -9,11 +9,13 @@ public class WeaponInventoryManager : MonoBehaviour
     public WeaponInventorySlot[] weaponInventorySlots;
     public GameObject weaponInventoryItemPrefab;
     public GameObject gunSlot;
+    public static WeaponInventoryManager instance;
 
-    /*public void Awake()
+
+    public void Awake()
     {
         instance = this;
-    }*/
+    }
 
     public bool AddItem(Item item)
     {
@@ -61,12 +63,10 @@ public class WeaponInventoryManager : MonoBehaviour
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
             if (itemInSlot == null )
             {
-                itemInSlot.count--;
-                itemInSlot.RefreshCount();
                 Debug.Log("Before Destroy");
                 foreach (Transform child in gunSlot.transform)
                 {
-                Destroy(gunSlot.gameObject);
+                Destroy(child.gameObject);
                 Debug.Log("Destroyyyy");
                 }
             }

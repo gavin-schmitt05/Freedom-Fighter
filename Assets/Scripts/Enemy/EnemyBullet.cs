@@ -36,6 +36,12 @@ public class EnemyBullet : MonoBehaviour
 
         }
 
+        else if (other.gameObject.TryGetComponent<crateHealth>(out crateHealth crateComponent))
+        {
+            crateComponent.TakeDamage(1);
+            Destroy(gameObject);
+        }
+
         else
         {
             Destroy(gameObject);

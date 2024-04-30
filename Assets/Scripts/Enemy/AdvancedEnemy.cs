@@ -43,6 +43,7 @@ public class AdvancedEnemy : MonoBehaviour
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+        target = GameObject.FindGameObjectWithTag("Player").transform;
 
 
         InvokeRepeating("UpdatePath", 0f, pathUpdateSeconds);
@@ -54,16 +55,19 @@ public class AdvancedEnemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-          if (CanSeePlayer)
-           {
+        
+         // if (CanSeePlayer)
+          // {
             
             if (TargetInDistance() && followEnabled)
             {
                 PathFollow();
+                
+
                 //Debug.Log("I see");
                 //AstarPath.active.Scan();
             }
-           }
+          // }
 
         
     }
@@ -78,6 +82,10 @@ public class AdvancedEnemy : MonoBehaviour
             FOV();
         }
     }
+
+   
+
+
     private void FOV()
     {
         Collider2D[] rangeCheck = Physics2D.OverlapCircleAll(transform.position, radius, targetLayer);
@@ -220,4 +228,6 @@ public class AdvancedEnemy : MonoBehaviour
        
 
     }
+
+   
 }

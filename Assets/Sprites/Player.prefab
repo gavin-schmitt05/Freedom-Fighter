@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 8393465690352775758}
   - component: {fileID: 8393465690352775759}
   - component: {fileID: 8393465690352775756}
+  - component: {fileID: -3918819440149613724}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -338,8 +339,8 @@ MonoBehaviour:
   whatisPlatform:
     serializedVersion: 2
     m_Bits: 64
-  boomClone: {fileID: 347766054482963735, guid: 5f89057e70a87024f900b5cb5ed4a712, type: 3}
-  Grenade: {fileID: 3463112753378846904, guid: 22368073c20cd264f9054c342b13f419, type: 3}
+  boomClone: {fileID: 0}
+  Grenade: {fileID: 347766054482963735, guid: 5f89057e70a87024f900b5cb5ed4a712, type: 3}
   rb: {fileID: 0}
   Player: {fileID: 8393465690352775736}
   pHealth: {fileID: 8393465690352775745}
@@ -372,6 +373,23 @@ MonoBehaviour:
   - {fileID: 0}
   inventoryItemPrefab: {fileID: 481234755778830357, guid: bee79bd97cccf354aa320817e8b65ac7, type: 3}
   itemRefrence: {fileID: 11400000, guid: 58ad0afc3724b4e41970698b3ff4fc37, type: 2}
+  player: {fileID: 0}
+--- !u!114 &-3918819440149613724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8393465690352775736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e7ddfadd6d34b97b32a3729104b427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemReference: {fileID: 0}
+  inventorySlots: []
+  invetoryItemPrefab: {fileID: 0}
+  pHealth: {fileID: 0}
 --- !u!1 &8393465690550778295
 GameObject:
   m_ObjectHideFlags: 0

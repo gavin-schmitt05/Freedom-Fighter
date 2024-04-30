@@ -11,6 +11,8 @@ TagManager:
   - Bullet
   - Grenade
   - Ground
+  - PhoneLine
+  - ExtractionZone
   layers:
   - Default
   - TransparentFX

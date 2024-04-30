@@ -18,47 +18,62 @@ public class Boom : MonoBehaviour
 
 
 
+
+
     // Start is called before the first frame update
     void Start()
     {
         
-        // AstarPath.active.Scan();
-        explosionDistanceGo.SetActive(false);
-        StartCoroutine(Booom());
-        Debug.Log("Played Boom Script");
+
         
-        // yield return new WaitForSeconds(4f);
-        //AstarPath.active.Scan();
+        explosionDistanceGo.SetActive(false);
+        StartCoroutine(Checkboom());
+        Debug.Log("played boom script sir");
+        
+        
+       
 
 
     }
+    
+
+   
+
+
+
+      
 
 
 
     IEnumerator Booom()
     {
-
-        yield return new WaitForSeconds(3f);
+        Debug.Log("Booooooom created");
+        yield return new WaitForSeconds(2.5f);
         explosionDistanceGo.SetActive(true);
         
+        
         DestroyArea();
+      
 
 
-       // AstarPath.active.Scan();
+      
         Destroy(this.gameObject, 0.05f);
         Debug.Log("test");
+        
 
 
        
     }
 
 
-    IEnumerator Check()
+    IEnumerator Checkboom()
     {
-
-        yield return new WaitForSeconds(3.1f);
-        //AstarPath.active.Scan();
-        Debug.Log("PLEASE WORK PRETTY PLEASE---------------->");
+        yield return new WaitForSeconds(1f);
+        yield return StartCoroutine(Booom());
+        AstarPath.active.Scan();
+        Debug.Log("is this working ---------------------------------------------->");
+        
+        
 
 
 
@@ -77,11 +92,11 @@ public class Boom : MonoBehaviour
                 float distance = Vector2.Distance(transform.position, checkCellPos) - 0.001f;
                 if (distance <= radiusInt)
                 {
-                    //    Collider2D overCollider2d = Physics2D.OverlapCircle(checkCellPos, 0.01f, whatisPlatform);
-                    //     if (overCollider2d != null)
-                    //    {
-                    //         overCollider2d.transform.GetComponent<Ground>().MakeDot(checkCellPos);
-                    //      }
+                    /*Collider2D overCollider2d = Physics2D.OverlapCircle(checkCellPos, 0.01f, whatisPlatform);
+                    if (overCollider2d != null)
+                    {
+                        overCollider2d.transform.GetComponent<Ground>().MakeDot(checkCellPos);
+                    }*/
 
                     Collider2D[] overCollider2d = Physics2D.OverlapCircleAll(checkCellPos, 0.01f, whatisPlatform);
                     if (overCollider2d.Length > 0)
@@ -89,8 +104,7 @@ public class Boom : MonoBehaviour
                         foreach (Collider2D overColl in overCollider2d)
                         {
                             overColl.GetComponent<Ground>().MakeDot(checkCellPos);
-                          //  AstarPath.active.Scan();
-                          Debug.Log("Played for each boom statement");
+                            Debug.Log("played for each statement");
                             
                         }
 
@@ -131,9 +145,16 @@ public class Boom : MonoBehaviour
 
         
        // Debug.Log("test---------------->");
-      //  AstarPath.active.Scan();
+      
 
     }
+
+
+
+
+
+
+    
 
  
 }

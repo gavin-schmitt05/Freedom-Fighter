@@ -15,22 +15,40 @@ public class GrenadeThrow : MonoBehaviour
     public InventorySlot[] inventorySlots;
     public GameObject inventoryItemPrefab;
     public Item itemRefrence;
+     public GameObject player;
 
-    
-
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        player = GameObject.Find("Player");
     }
+
+   
 
     // Update is called once per frame
     void Update()
     {
+          if (player.transform.localScale == new Vector3(1, 1, 1))
+        {
+            ShootPoint.transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        else if (player.transform.localScale == new Vector3(-1, 1, 1))
+        {
+            ShootPoint.transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+
         if (pHealth.health > 0)
         {
-            if (Input.GetKeyDown("g"))
+            if(Input.GetButtonDown("Grenade"))
             {
+                Player = GameObject.Find("Player");
+                if (Player.transform.localScale == new Vector3(1, 1, 1))
+                {
+                    ShootPoint.transform.eulerAngles = new Vector3(0, 0, 0);
+                }
+                else if (Player.transform.localScale == new Vector3(-1, 1, 1))
+                {
+                    ShootPoint.transform.eulerAngles = new Vector3(0, 180, 0);
+                }
                 for (int i = 0; i < inventorySlots.Length; i++)
                 {
                     InventorySlot slot = inventorySlots[i];
@@ -50,7 +68,10 @@ public class GrenadeThrow : MonoBehaviour
                     }
                 }
             }
+                
+          //  }
         }
+            
     }
 }
 

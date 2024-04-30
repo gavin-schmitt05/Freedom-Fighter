@@ -24,7 +24,9 @@ public enum ItemType
 {
     Gun,
     Coin,
-    Grenade
+    Grenade,
+    HealthPack,
+    Ammo,
 
 }
 

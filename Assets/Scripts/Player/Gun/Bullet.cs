@@ -8,6 +8,8 @@ public class Bullet : MonoBehaviour
     public float BulletSpeed;
     public Rigidbody2D rb;
 
+   
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +37,10 @@ public class Bullet : MonoBehaviour
         {
             crateComponent.TakeDamage(1);
             Destroy(gameObject);
+        }
+        else if (collision.tag == "ExtractionZone")
+        {
+
         }
 
         else if(collision.tag == "Ladder")
