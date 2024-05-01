@@ -1,5 +1,74 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &850600007260187750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 741348973494119735}
+  - component: {fileID: 5701447292522027651}
+  - component: {fileID: 2596628674862238630}
+  m_Layer: 0
+  m_Name: RPGexpolsionDistance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &741348973494119735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850600007260187750}
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.006, y: 0.004, z: 0}
+  m_LocalScale: {x: -0.03602381, y: 0.045329668, z: 0.35706}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2227760775711977981}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &5701447292522027651
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850600007260187750}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.04184094, y: 0.14141859}
+  serializedVersion: 2
+  m_Radius: 3.4622812
+--- !u!250 &2596628674862238630
+PointEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850600007260187750}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceMagnitude: 1000
+  m_ForceVariation: 0
+  m_DistanceScale: 1
+  m_ForceSource: 0
+  m_ForceTarget: 0
+  m_ForceMode: 0
+  m_Drag: 0
+  m_AngularDrag: 0
 --- !u!1 &5862578332036104348
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +79,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2227760775711977981}
   - component: {fileID: 7047613861988672818}
-  - component: {fileID: 9155955978757257461}
+  - component: {fileID: 3138740156645702730}
   - component: {fileID: 6635433392871356550}
   - component: {fileID: 3808847965945437813}
   m_Layer: 0
@@ -31,7 +100,8 @@ Transform:
   m_LocalPosition: {x: -13.4, y: 4.99, z: 0}
   m_LocalScale: {x: -1.9823, y: 1.3982011, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 741348973494119735}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -87,7 +157,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9155955978757257461
+--- !u!114 &3138740156645702730
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,9 +166,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 5862578332036104348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 570acf464d52fa0449d50cfea31cb4f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 57fd42889a3724985bf9d29cfcfd0c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionDistanceGo: {fileID: 850600007260187750}
+  whatisPlatform:
+    serializedVersion: 2
+    m_Bits: 64
+  circleCollider2D: {fileID: 5701447292522027651}
+  enemySprite: {fileID: 0}
+  SplashRange: 1
+  Damage: 200
+  pHealth: {fileID: 0}
   BulletSpeed: 20
   rb: {fileID: 6635433392871356550}
 --- !u!50 &6635433392871356550

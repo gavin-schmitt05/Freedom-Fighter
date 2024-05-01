@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class OpenDoor : MonoBehaviour
 {
-    public Sprite opened;
+    public Sprite openedDoor;
     public BoxCollider2D doorCollider;
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -21,10 +20,12 @@ public class OpenDoor : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = opened;
+            this.GetComponent<SpriteRenderer>().sprite = openedDoor;
             doorCollider.enabled = false;
         }
     }
+}
+
        
 
     
@@ -32,4 +33,3 @@ public class OpenDoor : MonoBehaviour
 
   
 
-}

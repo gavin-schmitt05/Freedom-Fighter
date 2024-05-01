@@ -8,7 +8,8 @@ public class MechShooting : MonoBehaviour
 
     public GameObject Bullet;
     public Rigidbody2D rb;
-    private GameObject player;
+    [HideInInspector] private GameObject player;
+    public Animator anim;
     
     
     //Audio - not needed at moment
@@ -22,7 +23,7 @@ public class MechShooting : MonoBehaviour
     
     void Start()
     {
-
+        player = GameObject.Find("Player");
     }
 
     void Update()
@@ -31,27 +32,34 @@ public class MechShooting : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            if (mechBody.transform.localScale == new Vector3(-1, 1, 1))
+            if (player.activeInHierarchy == false)
             {
-                ShootPoint.transform.eulerAngles = new Vector3(0, 0, 0);
+                if (mechBody.transform.localScale == new Vector3(-1, 1, 1))
+                {
+                    ShootPoint.transform.eulerAngles = new Vector3(0, 0, 0);
+                }
+                else if (mechBody.transform.localScale == new Vector3(1, 1, 1))
+                {
+                    ShootPoint.transform.eulerAngles = new Vector3(0, 180, 0);
+                }
+                if (Time.time > ReadyForShot)
+                {
+                    ReadyForShot = Time.time + 1 / FireRate;
+                    shoot();
+                }
             }
-            else if (mechBody.transform.localScale == new Vector3(1, 1, 1))
-            {
-                ShootPoint.transform.eulerAngles = new Vector3(0, 180, 0);
-            }
-            if (Time.time > ReadyForShot)
-            {
-                ReadyForShot = Time.time + 1 / FireRate;
-                shoot();
-            }
+        }
+        else
+        {
+            anim.SetBool("shooting", false);
         }
     }
 
     void shoot()
     {
         //audioSource.PlayOneShot(shootingAudioClip); // will add back when I need audio for mech
+        anim.SetBool("shooting", true);
         GameObject BulletIns = Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
-       
         Destroy(BulletIns, 3);
     } 
 }
