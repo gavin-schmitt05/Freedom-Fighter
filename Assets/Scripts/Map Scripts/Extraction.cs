@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class Extraction : CollidableObject
 {
@@ -63,6 +64,7 @@ public class Extraction : CollidableObject
             EnemySpawner.SetActive(true);
             Timer.SetActive(true);
             checkStart = true;
+            AstarPath.active.Scan();
 
             
         } 

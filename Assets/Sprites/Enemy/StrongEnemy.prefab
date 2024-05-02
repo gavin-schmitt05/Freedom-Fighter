@@ -145,7 +145,7 @@ MonoBehaviour:
   jumpModifier: 0.125
   jumpCheckOffset: 0.1
   followEnabled: 1
-  jumpEnabled: 1
+  jumpEnabled: 0
   directionLookEnabled: 1
 --- !u!114 &983400769509486377
 MonoBehaviour:
