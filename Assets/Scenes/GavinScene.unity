@@ -14073,6 +14073,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8393465691356437767}
     - target: {fileID: 1851788607325168425, guid: c00717aea67ea4948a7942887f766fe5, type: 3}
+      propertyPath: itemReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 2956d5f08d2a04f188b0f6d51a259e6e, type: 2}
+    - target: {fileID: 1851788607325168425, guid: c00717aea67ea4948a7942887f766fe5, type: 3}
       propertyPath: inventorySlots.Array.data[0]
       value: 
       objectReference: {fileID: 768126038}

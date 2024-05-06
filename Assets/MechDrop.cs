@@ -11,7 +11,11 @@ public class MechDrop : MonoBehaviour
 
     [Header("Mech")]
     public GameObject Mech;
-    public Transform airdropPoint;
+    private Transform airdropPoint;
+
+    private Rigidbody2D rb;
+    public Transform flareShootPoint;
+    public float Speed = 4;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +27,11 @@ public class MechDrop : MonoBehaviour
     {
         if (Input.GetKeyDown("4"))
         {
+            rb = itemReference.itemPrefab.GetComponent<Rigidbody2D>();
+            rb.velocity = transform.right * Speed;
+            Instantiate(itemReference.itemPrefab, transform.position, transform.rotation);
+            new WaitForSeconds(2.5f);
+            airdropPoint.position = new Vector3(itemReference.itemPrefab.transform.position.x, 75.0f, itemReference.itemPrefab.transform.position.z);
             Instantiate(Mech, airdropPoint.position, airdropPoint.rotation);
             /*for (int i = 0; i < inventorySlots.Length; i++)
             {
