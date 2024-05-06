@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +6,6 @@ using UnityEngine;
 public class OpenDoor : MonoBehaviour
 {
     public Sprite openedDoor;
-    public BoxCollider2D doorCollider;
     void Start()
     {
     }
@@ -21,52 +20,7 @@ public class OpenDoor : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            this.GetComponent<SpriteRenderer>().sprite = openedDoor;
-            doorCollider.enabled = false;
+            Destroy(gameObject);
         }
     }
 }
-
-       
-
-    
-    
-
-  
-
-=======
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class OpenDoor : MonoBehaviour
-{
-    public Sprite opened;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            gameObject.GetComponent<SpriteRenderer>().sprite = opened;
-
-        }
-    }
-       
-
-    
-    
-
-  
-
-}
->>>>>>> Stashed changes
