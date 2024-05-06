@@ -9,6 +9,8 @@ public class MainMenu : MonoBehaviour
     [Header("Menu buttons")]
     [SerializeField] private Button newGameButton;
     [SerializeField] private Button continueGameButton;
+    [SerializeField] private Button levelOneButton;
+    [SerializeField] private Button levelTwoButton;
 
     private void Start()
     {
@@ -36,9 +38,21 @@ public class MainMenu : MonoBehaviour
         //SceneManager.LoadSceneAsync("LoadingScene");
     }
 
+    public void OnLevelSelectOne()
+    {
+        DisableMenuButtons();
+        SceneManager.LoadScene(1);
+    }
+        public void OnLevelSelectTwo()
+    {
+        DisableMenuButtons();
+        SceneManager.LoadScene(2);
+    }
     private void DisableMenuButtons()
     {
         newGameButton.interactable = false;
         continueGameButton.interactable = false;
+        levelOneButton.interactable = false;
+        levelTwoButton.interactable = false;
     }
 }

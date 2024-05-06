@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour, IDataPersistence
 {
-
 
     public float speed = 5f;
     private float direction = 0f;
@@ -111,7 +111,5 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         LevelManager.instance.GameOver();
         gameObject.SetActive(false);
         GetComponent<PlayerMovement>().enabled = false;
-        //DataPersistenceManager.instance.NewGame();
     }
-
 }
