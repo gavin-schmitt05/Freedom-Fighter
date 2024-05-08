@@ -442,7 +442,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &415716729 stripped
 MonoBehaviour:
@@ -1025,7 +1025,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1044071522
 MonoBehaviour:
@@ -1135,7 +1135,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1064598643
 MonoBehaviour:
@@ -1630,6 +1630,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.054
       objectReference: {fileID: 0}
+    - target: {fileID: 5191792953590278483, guid: 47eb67473c6c92141aebcdb0277125af, type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 457524408}
     - target: {fileID: 7615908811750458679, guid: 47eb67473c6c92141aebcdb0277125af, type: 3}
       propertyPath: m_Name
       value: Assualt Rifle
@@ -60787,7 +60791,7 @@ PrefabInstance:
       objectReference: {fileID: 357499122}
     - target: {fileID: 8393465690352775749, guid: c00717aea67ea4948a7942887f766fe5, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8393465690352775749, guid: c00717aea67ea4948a7942887f766fe5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61258,7 +61262,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5494412601406729356, guid: f809cad4be6c94c77888ae6953507bd1, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5494412601406729356, guid: f809cad4be6c94c77888ae6953507bd1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61339,7 +61343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7394312197252710398, guid: 2c5d861ccf3c34b37b5685c1eeacc645, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7394312197252710398, guid: 2c5d861ccf3c34b37b5685c1eeacc645, type: 3}
       propertyPath: m_LocalScale.x

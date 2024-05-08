@@ -54,6 +54,10 @@ public class Bullet : MonoBehaviour
         {
             
         }
+        else if (collision.tag == "Bullet")
+        {
+            
+        }
 
         else
         {
