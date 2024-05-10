@@ -5,17 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class StateManager : MonoBehaviour
 {
+    //respawns by resetting current scene
     public void ReloadCurrentScene()
     {
         Debug.Log("Button works");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
-    public void ChangeSceneByName(string name)
+    // respawns by switching scenes to base camp and then turning off death panel
+    public void Respawn()
     {
-        if (name != null)
-        {
-            SceneManager.LoadScene(name);
-        }
+        SceneManager.LoadScene("LoadingScene");
+        DataPersistenceManager.instance.NewGame();
+        LevelManager.instance.GameOver();
     }
 }

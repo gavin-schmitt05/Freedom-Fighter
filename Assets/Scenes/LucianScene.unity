@@ -2125,7 +2125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8393465690352775745, guid: c00717aea67ea4948a7942887f766fe5, type: 3}
       propertyPath: health
-      value: 1000
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8393465690352775745, guid: c00717aea67ea4948a7942887f766fe5, type: 3}
       propertyPath: healthBar
@@ -3434,7 +3434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4349522223040962068, guid: d765c20cade622546b543c5f6ac6f0dd, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: MainCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 4349522223040962072, guid: d765c20cade622546b543c5f6ac6f0dd, type: 3}
       propertyPath: m_Pivot.x
@@ -3691,10 +3691,14 @@ PrefabInstance:
     - target: {fileID: 6241519656739884905, guid: d765c20cade622546b543c5f6ac6f0dd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 11500000, guid: 7d107e529779e594c8214da074727b7d, type: 3}
+      objectReference: {fileID: 922093925}
     - target: {fileID: 6241519656739884905, guid: d765c20cade622546b543c5f6ac6f0dd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241519656739884905, guid: d765c20cade622546b543c5f6ac6f0dd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StateManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6516779078400085026, guid: d765c20cade622546b543c5f6ac6f0dd, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3878,6 +3882,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d765c20cade622546b543c5f6ac6f0dd, type: 3}
+--- !u!114 &922093925 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1370971755422877820, guid: cb7fe11085f7c454baf12c7a741d8a56, type: 3}
+  m_PrefabInstance: {fileID: 1589603822}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2db92258370b16f4ca2cbde91d0dc93f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &925295149
 GameObject:
   m_ObjectHideFlags: 0
@@ -15848,7 +15863,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1195519694007659206, guid: a520d8bf4201241f29e239ab8f2c428b, type: 3}
       propertyPath: m_Name
-      value: Main Camera
+      value: MainCamera
       objectReference: {fileID: 0}
     - target: {fileID: 6227587452291433026, guid: a520d8bf4201241f29e239ab8f2c428b, type: 3}
       propertyPath: player

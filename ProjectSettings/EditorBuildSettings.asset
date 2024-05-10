@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/RespawnScene.unity
-    guid: 97e901ac044e04a6ea78ff2912d01d90
+    path: Assets/Scenes/LoadingScene.unity
+    guid: b4bbe01983e974cae83046b3771349cf
   - enabled: 1
     path: Assets/Scenes/LucianScene.unity
     guid: 2789b2063ef71ef4185519f69f76dfbe

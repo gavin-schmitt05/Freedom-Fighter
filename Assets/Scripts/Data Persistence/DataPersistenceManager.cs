@@ -11,6 +11,9 @@ public class DataPersistenceManager : MonoBehaviour
 
     [Header("File Storage Config")]
     [SerializeField] private string fileName;
+    public GameObject player;
+    public GameObject mainCamera;
+    public GameObject mainCanvas;
 
     private GameData gameData;
     private List<IDataPersistence> dataPersistenceObjects;
@@ -30,6 +33,9 @@ public class DataPersistenceManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
         this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
+        player = GameObject.Find("Player");
+        mainCamera = GameObject.Find("MainCamera");
+        mainCanvas = GameObject.Find("MainCanvas");
     }
 
     private void OnEnable()
@@ -66,6 +72,18 @@ public class DataPersistenceManager : MonoBehaviour
     {
         this.gameData = new GameData();
         SaveGame();
+        if(player)
+        {
+            Destroy(player);
+        }
+        if(mainCanvas)
+        {
+            Destroy(mainCanvas);
+        }
+        if(mainCamera)
+        {
+            Destroy(mainCamera);
+        }
     }
 
     public void LoadGame() 

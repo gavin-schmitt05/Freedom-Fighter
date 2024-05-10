@@ -25,9 +25,9 @@ public class MainMenu : MonoBehaviour
         DisableMenuButtons();
         DataPersistenceManager.instance.NewGame();
 
-        SceneManager.LoadSceneAsync("LucianScene");
+        //SceneManager.LoadSceneAsync("LucianScene");
         //implement once main menu isnt needed for testing
-        //SceneManager.LoadSceneAsync("LoadingScene");
+        SceneManager.LoadSceneAsync("LoadingScene");
     }
 
     public void OnContinueClicked()
@@ -43,10 +43,10 @@ public class MainMenu : MonoBehaviour
         DisableMenuButtons();
         SceneManager.LoadScene(1);
     }
-        public void OnLevelSelectTwo()
+    public void OnLevelSelectTwo()
     {
         DisableMenuButtons();
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
     }
     private void DisableMenuButtons()
     {
