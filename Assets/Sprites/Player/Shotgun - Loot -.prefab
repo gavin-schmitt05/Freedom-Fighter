@@ -125,6 +125,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sr: {fileID: 1487295802096175974}
-  collider: {fileID: 6631095970101365311}
+  collider: {fileID: 0}
   moveSpeed: 0
   itemToPickup: {fileID: 11400000, guid: 65f0f367b5bd64631b2f03abf4720588, type: 2}

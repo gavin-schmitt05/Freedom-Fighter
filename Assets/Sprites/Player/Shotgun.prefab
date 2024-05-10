@@ -129,13 +129,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a608e652d5042fe9869acf64929318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoCount: {fileID: 0}
+  ammoCount: {fileID: 6148919330714740201, guid: 63f19a4adc15a8c47885e6c62b6c591d, type: 3}
   ShotgunBullet: {fileID: 7743518404454463258, guid: 8accc5ce5ba004262bceb5fa5c004dce, type: 3}
   Max: 2
   Current: 0
   rb: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 8393465690352775736, guid: c00717aea67ea4948a7942887f766fe5, type: 3}
   ShootPoint: {fileID: 5186983659336280134}
   FireRate: 1
   direction: 0
-  pHealth: {fileID: 0}
+  pHealth: {fileID: 8393465690352775745, guid: c00717aea67ea4948a7942887f766fe5, type: 3}

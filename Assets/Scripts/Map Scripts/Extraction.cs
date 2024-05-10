@@ -16,7 +16,7 @@ public class Extraction : CollidableObject
     public Timer timeAmount;
 
     public GameObject extractionZone;
-    public LayerMask whatisPlayer;
+   
 
    // public float range = 1;
 
@@ -50,8 +50,12 @@ public class Extraction : CollidableObject
 
         if (Input.GetKey(KeyCode.E))
         {
+          if (collidedObject.CompareTag("Player"))
+          {
             OnInteract();
             Debug.Log("BYEE&&&&&&&&&&&&&&&&&&&");
+          }
+
         }
     }
 

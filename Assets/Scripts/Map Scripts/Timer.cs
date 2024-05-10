@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -25,6 +25,8 @@ public class Timer : MonoBehaviour
             gameObject.SetActive(false);
             Extract.z_Interacted = false;
             Extract.EnemySpawner.SetActive(false);
+            SceneManager.LoadScene("BaseCampTestScene");
+
         }
 
         int minutes = Mathf.FloorToInt(remainingTime / 60);
