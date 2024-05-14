@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,6 @@ using UnityEngine;
 public class OpenDoor : MonoBehaviour
 {
     public Sprite openedDoor;
-    public BoxCollider2D doorCollider;
     void Start()
     {
     }
@@ -20,16 +20,7 @@ public class OpenDoor : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            this.GetComponent<SpriteRenderer>().sprite = openedDoor;
-            doorCollider.enabled = false;
+            Destroy(gameObject);
         }
     }
 }
-
-       
-
-    
-    
-
-  
-

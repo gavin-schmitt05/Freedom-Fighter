@@ -52,21 +52,7 @@ public class Shooting : MonoBehaviour
         }
 
 
-        if (pHealth.health > 0)
-        {
-            if (Current > 0)
-            {
-                if (Input.GetMouseButton(0))
-                {
-                    if (Time.time > ReadyForShot)
-                    {
-                        ReadyForShot = Time.time + 1 / FireRate;
-                        shoot();
-                    }
-
-                }
-            }
-        }
+    
 
 
     } 
