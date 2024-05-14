@@ -733,6 +733,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2964436287084163194, guid: 47eb67473c6c92141aebcdb0277125af, type: 3}
+      propertyPath: Max
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964436287084163194, guid: 47eb67473c6c92141aebcdb0277125af, type: 3}
+      propertyPath: Current
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964436287084163194, guid: 47eb67473c6c92141aebcdb0277125af, type: 3}
+      propertyPath: FireRate
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964436287084163194, guid: 47eb67473c6c92141aebcdb0277125af, type: 3}
       propertyPath: ammoCount
       value: 
       objectReference: {fileID: 1851759587}
@@ -2032,7 +2044,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   Enemy: {fileID: 620415877}
   FirePoint: {fileID: 842152098}
-  FireRate: 1
+  FireRate: 4
   direction: 0
   colliderDistance: 0.2249
   boxCollider: {fileID: 620415885}
@@ -2125,7 +2137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8393465690352775745, guid: c00717aea67ea4948a7942887f766fe5, type: 3}
       propertyPath: health
-      value: 10
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 8393465690352775745, guid: c00717aea67ea4948a7942887f766fe5, type: 3}
       propertyPath: healthBar
@@ -5818,6 +5830,14 @@ PrefabInstance:
       propertyPath: deathPanel
       value: 
       objectReference: {fileID: 289704676}
+    - target: {fileID: 1370971755422877820, guid: cb7fe11085f7c454baf12c7a741d8a56, type: 3}
+      propertyPath: g1
+      value: 
+      objectReference: {fileID: 1070301116}
+    - target: {fileID: 1370971755422877820, guid: cb7fe11085f7c454baf12c7a741d8a56, type: 3}
+      propertyPath: g2
+      value: 
+      objectReference: {fileID: 445374637}
     - target: {fileID: 3073656382867042714, guid: cb7fe11085f7c454baf12c7a741d8a56, type: 3}
       propertyPath: m_Name
       value: LevelManager
