@@ -9,17 +9,13 @@ public class MechDrop : MonoBehaviour
     public InventorySlot[] inventorySlots;
     public GameObject invetoryItemPrefab;
 
-    [Header("Mech")]
-    public GameObject Mech;
-    private Transform airdropPoint;
-
-    private Rigidbody2D rb;
     public Transform flareShootPoint;
-    public float Speed = 4;
+    public Transform playerTransform;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -27,30 +23,29 @@ public class MechDrop : MonoBehaviour
     {
         if (Input.GetKeyDown("4"))
         {
-            rb = itemReference.itemPrefab.GetComponent<Rigidbody2D>();
-            rb.velocity = transform.right * Speed;
-            Instantiate(itemReference.itemPrefab, transform.position, transform.rotation);
-            new WaitForSeconds(2.5f);
-            airdropPoint.position = new Vector3(itemReference.itemPrefab.transform.position.x, 75.0f, itemReference.itemPrefab.transform.position.z);
-            Instantiate(Mech, airdropPoint.position, airdropPoint.rotation);
-            /*for (int i = 0; i < inventorySlots.Length; i++)
+            for (int i = 0; i < inventorySlots.Length; i++)
             {
                 InventorySlot slot = inventorySlots[i];
                 InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
                 if (itemInSlot != null && itemInSlot.item == itemReference)
                 {
+                    // Inventory
                     itemInSlot.count--;
                     Destroy(itemInSlot.gameObject);
                     itemInSlot.RefreshCount();
-
-                    pHealth.health += 30f;
-
-
-
-
+                    
+                    if (playerTransform.localScale == new Vector3(1, 1, 1))
+                    {
+                        flareShootPoint.transform.eulerAngles = new Vector3(0, 0, 0);
+                    }
+                    else if (playerTransform.localScale == new Vector3(-1, 1, 1))
+                    {
+                        flareShootPoint.transform.eulerAngles = new Vector3(0, 180, 0);
+                    }
+                    Instantiate(itemReference.itemPrefab, flareShootPoint.position, flareShootPoint.rotation);
                     break;
                 }
-            }*/
+            }
 
         }
     }
