@@ -33,10 +33,10 @@ public class Helicopter : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collison)
+    private void OnCollisionEnter2D(Collision2D other)
     {
 
-        if (collison.tag == "Player")
+        if (other.gameObject.CompareTag("Player"))
         {
             heliCollided = true;
             Player.SetActive(false);

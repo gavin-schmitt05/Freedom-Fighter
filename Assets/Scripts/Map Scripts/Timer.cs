@@ -10,6 +10,7 @@ public class Timer : MonoBehaviour
     [SerializeField] public float remainingTime;
 
      public Extraction Extract;
+     public GameObject heli;
 
     // Update is called once per frame
     void Update()
@@ -21,11 +22,14 @@ public class Timer : MonoBehaviour
 
         else if (remainingTime < 0)
         {
+            heli.SetActive(true);
             remainingTime = 0;
             gameObject.SetActive(false);
             Extract.z_Interacted = false;
             Extract.EnemySpawner.SetActive(false);
-            SceneManager.LoadScene("BaseCampTestScene");
+            
+            
+
 
         }
 

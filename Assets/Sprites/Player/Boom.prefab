@@ -148,6 +148,8 @@ MonoBehaviour:
   SplashRange: 1
   Damage: 50
   pHealth: {fileID: 0}
+  anim: {fileID: 8467229034320498944}
+  nade: {fileID: 1981151112161540763}
 --- !u!114 &7614234326333421239
 MonoBehaviour:
   m_ObjectHideFlags: 0
