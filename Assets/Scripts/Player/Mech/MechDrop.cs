@@ -9,13 +9,13 @@ public class MechDrop : MonoBehaviour
     public InventorySlot[] inventorySlots;
     public GameObject invetoryItemPrefab;
 
-    [Header("Mech")]
-    public GameObject Mech;
-    public Transform airdropPoint;
+    public Transform flareShootPoint;
+    public Transform playerTransform;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -23,25 +23,29 @@ public class MechDrop : MonoBehaviour
     {
         if (Input.GetKeyDown("4"))
         {
-            Instantiate(Mech, airdropPoint.position, airdropPoint.rotation);
-            /*for (int i = 0; i < inventorySlots.Length; i++)
+            for (int i = 0; i < inventorySlots.Length; i++)
             {
                 InventorySlot slot = inventorySlots[i];
                 InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
                 if (itemInSlot != null && itemInSlot.item == itemReference)
                 {
+                    // Inventory
                     itemInSlot.count--;
                     Destroy(itemInSlot.gameObject);
                     itemInSlot.RefreshCount();
-
-                    pHealth.health += 30f;
-
-
-
-
+                    
+                    if (playerTransform.localScale == new Vector3(1, 1, 1))
+                    {
+                        flareShootPoint.transform.eulerAngles = new Vector3(0, 0, 0);
+                    }
+                    else if (playerTransform.localScale == new Vector3(-1, 1, 1))
+                    {
+                        flareShootPoint.transform.eulerAngles = new Vector3(0, 180, 0);
+                    }
+                    Instantiate(itemReference.itemPrefab, flareShootPoint.position, flareShootPoint.rotation);
                     break;
                 }
-            }*/
+            }
 
         }
     }
