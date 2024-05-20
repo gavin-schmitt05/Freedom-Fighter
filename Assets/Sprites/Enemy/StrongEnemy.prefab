@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 983400769509486381}
   m_Layer: 7
   m_Name: StrongEnemy
-  m_TagString: Enemy
+  m_TagString: Strong Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Helicopter : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class Helicopter : MonoBehaviour
         if (heliCollided)
         {
             heli.velocity = new Vector2(speed, height);
+            StartCoroutine(change());
             
             
         }
@@ -41,9 +43,19 @@ public class Helicopter : MonoBehaviour
             heliCollided = true;
             Player.SetActive(false);
             CameraController.instance.changeCamera(this.transform);
+            
 
         }
 
+    }
+
+
+     IEnumerator change()
+    {
+        Debug.Log("changing now !!!!!!!!!!!!!");
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene("BaseCampTestScene");
+       
     }
 
 
