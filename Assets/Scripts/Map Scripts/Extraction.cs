@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class Extraction : CollidableObject
 {
@@ -15,7 +16,7 @@ public class Extraction : CollidableObject
     public Timer timeAmount;
 
     public GameObject extractionZone;
-    public LayerMask whatisPlayer;
+   
 
    // public float range = 1;
 
@@ -49,8 +50,12 @@ public class Extraction : CollidableObject
 
         if (Input.GetKey(KeyCode.E))
         {
+          if (collidedObject.CompareTag("Player"))
+          {
             OnInteract();
             Debug.Log("BYEE&&&&&&&&&&&&&&&&&&&");
+          }
+
         }
     }
 
@@ -63,6 +68,7 @@ public class Extraction : CollidableObject
             EnemySpawner.SetActive(true);
             Timer.SetActive(true);
             checkStart = true;
+            AstarPath.active.Scan();
 
             
         } 

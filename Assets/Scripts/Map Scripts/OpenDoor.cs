@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class OpenDoor : MonoBehaviour
 {
-    public Sprite openedDoor;
+    public Sprite opened;
+    public BoxCollider2D doorCollider;
     void Start()
     {
     }
@@ -20,7 +21,13 @@ public class OpenDoor : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(gameObject);
+            gameObject.GetComponent<SpriteRenderer>().sprite = opened;
+            doorCollider.enabled = false;
+        }
+        if (collision.gameObject.tag == "Strong Enemy")
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = opened;
+            doorCollider.enabled = false;
         }
     }
 }

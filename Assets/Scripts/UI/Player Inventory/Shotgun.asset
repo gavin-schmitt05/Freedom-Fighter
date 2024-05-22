@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5dbb81aa22c31ce46aebfa9b3a0869f0, type: 3}
-  m_Name: Coin
+  m_Name: Shotgun
   m_EditorClassIdentifier: 
-  type: 1
-  actionType: 1
-  itemPrefab: {fileID: 0}
+  type: 0
+  actionType: 0
+  itemPrefab: {fileID: 7855394326360838363, guid: 1fa4fe884e4904d758346550c8c2687d, type: 3}
   range: {x: 5, y: 4}
   stackable: 1
-  isGun: 0
-  maxStackOfItem: 6
-  image: {fileID: 21300000, guid: 3716b38770bc0425db07b8c864ac28e9, type: 3}
+  isGun: 1
+  maxStackOfItem: 0
+  image: {fileID: 21300000, guid: 7e161327b35424a01b07db6362eec5e4, type: 3}

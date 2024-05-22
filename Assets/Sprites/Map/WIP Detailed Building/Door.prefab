@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8415290077469391747}
   - component: {fileID: 6058140377958499478}
-  - component: {fileID: -3063640493669881806}
-  - component: {fileID: -5781194617843428884}
   - component: {fileID: 4302025437813790222}
+  - component: {fileID: -99959658513844527}
+  - component: {fileID: -6121291025790312550}
+  - component: {fileID: 2243322419268581894}
   m_Layer: 0
   m_Name: Door
   m_TagString: Door
@@ -87,41 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-3063640493669881806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8136914041887829864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 046fefa28d6020949949aa469f7a614b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openedDoor: {fileID: 21300000, guid: b8988de59f09c2943b22753fd45808d7, type: 3}
-  doorCollider: {fileID: 4302025437813790222}
---- !u!50 &-5781194617843428884
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8136914041887829864}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
 --- !u!61 &4302025437813790222
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148,3 +114,51 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.19933754, y: 0.9970792}
   m_EdgeRadius: 0
+--- !u!95 &-99959658513844527
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8136914041887829864}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-6121291025790312550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8136914041887829864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b82210642b5402c87d241061497740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 3
+--- !u!114 &2243322419268581894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8136914041887829864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046fefa28d6020949949aa469f7a614b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: {fileID: 21300000, guid: b8988de59f09c2943b22753fd45808d7, type: 3}
+  doorCollider: {fileID: 4302025437813790222}

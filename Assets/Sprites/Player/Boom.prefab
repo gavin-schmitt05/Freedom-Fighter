@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1981151112161540763}
   - component: {fileID: 4186731656026104331}
   - component: {fileID: 7614234326333421239}
+  - component: {fileID: 8467229034320498944}
   m_Layer: 0
   m_Name: Boom
   m_TagString: Untagged
@@ -147,6 +148,8 @@ MonoBehaviour:
   SplashRange: 1
   Damage: 50
   pHealth: {fileID: 0}
+  anim: {fileID: 8467229034320498944}
+  nade: {fileID: 1981151112161540763}
 --- !u!114 &7614234326333421239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +165,26 @@ MonoBehaviour:
   impactField: 0.28
   Speed: 4
   rb: {fileID: 1981151112161540763}
+--- !u!95 &8467229034320498944
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347766054482963735}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7ba04b21716ad4a5db50669a26ba5bb1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3455546688359194848
 GameObject:
   m_ObjectHideFlags: 0
