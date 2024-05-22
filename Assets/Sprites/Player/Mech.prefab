@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6762440138122657904}
   - component: {fileID: 4626517450647527526}
-  m_Layer: 0
+  - component: {fileID: 6535460434567909359}
+  - component: {fileID: 1553013249336853836}
+  m_Layer: 13
   m_Name: MechGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +30,8 @@ Transform:
   m_LocalPosition: {x: -0.468, y: 0.469, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4293145488137229555}
   m_Father: {fileID: 1466691619722503086}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -84,6 +87,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6535460434567909359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786344296522653763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb22122c60d4b4bc7948570995aa05f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mechBody: {fileID: 1466691619722503072}
+  Bullet: {fileID: 5862578332036104348, guid: cde3368bd2fa948a8913a828f2273c1e, type: 3}
+  rb: {fileID: 0}
+  anim: {fileID: 1553013249336853836}
+  ShootPoint: {fileID: 4293145488137229555}
+  FireRate: 3
+  direction: 0
+--- !u!95 &1553013249336853836
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786344296522653763}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 26a564dc9b658904299f76a60132da14, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1466691619412140902
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1466691619412140897}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +173,7 @@ GameObject:
   - component: {fileID: 1466691619722503074}
   - component: {fileID: 1466691619722503084}
   - component: {fileID: 1466691619722503081}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Mech
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,18 +236,18 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 383894597
+  m_SortingLayer: -2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1624748279, guid: 14891f27d9f8a4947a169c19ffd82675, type: 3}
+  m_Sprite: {fileID: -2056576559, guid: 0414918e6ac60374f8fbade4c0192689, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.125, y: 3.125}
+  m_Size: {x: 6.25, y: 9.375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &1466691619722503085
@@ -246,8 +288,8 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.375, y: 9.375}
-    newSize: {x: 3.125, y: 3.125}
+    oldSize: {x: 6.25, y: 9.375}
+    newSize: {x: 6.25, y: 9.375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -413,18 +455,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.297926, y: -0.046593666}
+  m_Offset: {x: 1.2925663, y: -0.046593666}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.375, y: 9.375}
-    newSize: {x: 3.125, y: 3.125}
+    oldSize: {x: 6.25, y: 9.375}
+    newSize: {x: 6.25, y: 9.375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.78523254, y: 1.6550884}
+  m_Size: {x: 0.79595184, y: 1.6550884}
   m_EdgeRadius: 0
 --- !u!114 &1466691619722503084
 MonoBehaviour:
@@ -441,8 +483,9 @@ MonoBehaviour:
   speed: 1
   jumpSpeed: 5
   Entrance: {fileID: 1466691619722503074}
-  playerIsDisabled: 0
+  playerEnteredMech: 0
   mechTransform: {fileID: 1466691619722503086}
+  playerTransform: {x: 0, y: 0, z: 0}
   groundCheck: {fileID: 1466691619412140897}
   groundCheckRadius: 0.2
   groundLayer:
@@ -471,6 +514,37 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &3999306757179397666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4293145488137229555}
+  m_Layer: 13
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4293145488137229555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3999306757179397666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.88, y: -0.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6762440138122657904}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5579293198319427004
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,8 +556,8 @@ GameObject:
   - component: {fileID: 5098075625112677598}
   - component: {fileID: 1164807398301740396}
   - component: {fileID: 4482546407435847034}
-  m_Layer: 0
-  m_Name: AMERICANFlag_0
+  m_Layer: 13
+  m_Name: AMERICANFlag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -497,7 +571,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5579293198319427004}
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.34, y: -5.24, z: 0}
+  m_LocalPosition: {x: 0.24, y: 1.19, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -566,7 +640,7 @@ Animator:
   m_GameObject: {fileID: 5579293198319427004}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3cd7528560f8fed41b132528ddb77cf8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

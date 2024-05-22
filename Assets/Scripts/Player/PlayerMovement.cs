@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         direction = Input.GetAxis("Horizontal");
         animator.SetFloat("speed", Mathf.Abs(direction));
 
-        if (pHealth.health > 0)
+        if (pHealth.health > 0) // replace later
         {
             animator.SetBool("death", false);
 
@@ -97,6 +97,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
                 animator.SetBool("IsJumping", true);
             }
         }
+    
 
 
         else if (pHealth.health <= 0) {

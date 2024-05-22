@@ -27,6 +27,8 @@ public enum ItemType
     Grenade,
     HealthPack,
     Ammo,
+    Airdrop,
+    Bomb,
 
 }
 
@@ -34,5 +36,6 @@ public enum ActionType
 {
     Weapon,
     Money,
-    Consumables
+    Consumables,
+    Support,
 }

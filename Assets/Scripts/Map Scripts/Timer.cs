@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -10,6 +10,7 @@ public class Timer : MonoBehaviour
     [SerializeField] public float remainingTime;
 
      public Extraction Extract;
+     public GameObject heli;
 
     // Update is called once per frame
     void Update()
@@ -21,10 +22,15 @@ public class Timer : MonoBehaviour
 
         else if (remainingTime < 0)
         {
+            heli.SetActive(true);
             remainingTime = 0;
             gameObject.SetActive(false);
             Extract.z_Interacted = false;
             Extract.EnemySpawner.SetActive(false);
+            
+            
+
+
         }
 
         int minutes = Mathf.FloorToInt(remainingTime / 60);

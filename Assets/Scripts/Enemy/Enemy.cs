@@ -13,65 +13,50 @@ public class Enemy : MonoBehaviour
     //For enemy health bars possibly
     //[SerializeField] floatingHealthBar healthBar;
 
-    //public GameObject[] itemDrops;
-    public GameObject[] itemsToSpawn;
+    public GameObject[] commonItem;
+    public GameObject[] uncommonItem;
+    public GameObject[] rareItem;
     [HideInInspector] public int itemSpawning;
-    private System.Random rnd = new System.Random();
+    private System.Random rndRarety = new System.Random();
+    private System.Random rndItem = new System.Random();
 
     private void Start()
     {
         health = maxHealth;
-        LootRandomizer();
     }
 
     public void TakeDamage(float damageAmount)
     {
         health -= damageAmount;
-
-        //For enemy health bars possibly
-        //healthBar.UpdateHealthBar(health, maxHealth);
         if (health <= 0)
         {
+            LootRandomizer();
             Destroy(gameObject);
             if (GetComponentInParent<EnemyPatrol>() != null)
             {
                 GetComponentInParent<EnemyPatrol>().enabled = false;
             }
-            if (itemSpawning != 3)
-            {
-                ItemDrop();
-            }
-
-
         }
     }
 
     private void LootRandomizer()
     {
-        int percentagePicker = rnd.Next(1, 101);
+        int raretyOfItem = rndRarety.Next(1, 5);
+        int itemSpawning = 0;
 
-        if (percentagePicker >= 1 && percentagePicker <= 50)
+        if (raretyOfItem == 1)
         {
-            itemSpawning = 0;
+            itemSpawning = rndItem.Next(1,4);
+            Instantiate(commonItem[itemSpawning], transform.position + new Vector3(0, 1, 0), Quaternion.identity);
         }
-        else if (percentagePicker >= 51 && percentagePicker <= 75)
+        else if (raretyOfItem == 2)
         {
             itemSpawning = 1;
+            Instantiate(uncommonItem[itemSpawning], transform.position + new Vector3(0, 1, 0), Quaternion.identity);
         }
-        else if (percentagePicker >= 76 && percentagePicker <= 88)
+        else if (raretyOfItem == 3)
         {
-            itemSpawning = 2;
+            Instantiate(rareItem[itemSpawning], transform.position + new Vector3(0, 1, 0), Quaternion.identity);
         }
-        else if (percentagePicker >= 89 && percentagePicker <= 100)
-        {
-            itemSpawning = 3;
-        }
-        
     }
-
-    private void ItemDrop()
-    {
-        Instantiate(itemsToSpawn[itemSpawning], transform.position + new Vector3(0, 1, 0), Quaternion.identity);
-    }
-
 }

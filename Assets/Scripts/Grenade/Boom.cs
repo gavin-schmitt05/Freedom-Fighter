@@ -15,6 +15,9 @@ public class Boom : MonoBehaviour
     public float SplashRange = 1;
     public float Damage = 100;
     public playerHealth pHealth;
+    public Animator anim;
+    public Rigidbody2D nade;
+
 
 
 
@@ -23,6 +26,7 @@ public class Boom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         
 
         
@@ -53,11 +57,12 @@ public class Boom : MonoBehaviour
         
         
         DestroyArea();
-      
+        anim.SetBool("explode", true);
+        nade.constraints = RigidbodyConstraints2D.FreezeAll;
 
 
       
-        Destroy(this.gameObject, 0.05f);
+        Destroy(this.gameObject, 0.6f);
         Debug.Log("test");
         
 
@@ -119,11 +124,13 @@ public class Boom : MonoBehaviour
         
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, SplashRange);
+        
         foreach(Collider2D nearbyObject in colliders)
         {
             var obj = nearbyObject.GetComponent<Enemy>();
             var obs = nearbyObject.GetComponent<crateHealth>();
             var play = nearbyObject.GetComponent<playerHealth>();
+            var dr = nearbyObject.GetComponent<doorHealth>();
             if (obj != null)
             {
                 obj.TakeDamage(Damage);
@@ -136,6 +143,11 @@ public class Boom : MonoBehaviour
             {
                 play.gameObject.GetComponent<playerHealth>().health -= Damage;
             }
+            if (dr != null)
+            {
+                dr.TakeDamage(Damage);
+            }
+         
 
         }
 

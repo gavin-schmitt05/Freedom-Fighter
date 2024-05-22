@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5132925131491585409}
   - component: {fileID: 762244722068936437}
   - component: {fileID: -3488072029170162960}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Crate
-  m_TagString: Untagged
+  m_TagString: Crate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,9 +101,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 3
-  itemsToSpawn:
-  - {fileID: 7615908811750458679, guid: 06c19221ce1445e4fb49a8b4f8f9bc44, type: 3}
+  commonItem:
   - {fileID: 4534169621473437110, guid: 308a63157087ba149b880cc68e782fd8, type: 3}
+  - {fileID: 4534169621473437110, guid: 308a63157087ba149b880cc68e782fd8, type: 3}
+  - {fileID: 4534169621473437110, guid: 308a63157087ba149b880cc68e782fd8, type: 3}
+  uncommonItem:
+  - {fileID: 7615908811750458679, guid: 06c19221ce1445e4fb49a8b4f8f9bc44, type: 3}
+  - {fileID: 7615908811750458679, guid: 06c19221ce1445e4fb49a8b4f8f9bc44, type: 3}
+  - {fileID: 7615908811750458679, guid: 06c19221ce1445e4fb49a8b4f8f9bc44, type: 3}
+  rareItem:
+  - {fileID: 3463112753378846904, guid: cac90589eca06244f8a8d6411429b6eb, type: 3}
+  - {fileID: 3463112753378846904, guid: cac90589eca06244f8a8d6411429b6eb, type: 3}
   - {fileID: 3463112753378846904, guid: cac90589eca06244f8a8d6411429b6eb, type: 3}
   itemSpawning: 0
 --- !u!50 &762244722068936437
