@@ -15,6 +15,7 @@ TagManager:
   - ExtractionZone
   - Crate
   - Strong Enemy
+  - Extract
   layers:
   - Default
   - TransparentFX
