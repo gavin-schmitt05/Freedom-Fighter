@@ -292,7 +292,7 @@ MonoBehaviour:
   groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 26816
   isTouchingGround: 0
   animator: {fileID: 8393465690352775758}
   jump: 0
@@ -407,7 +407,7 @@ MonoBehaviour:
   - {fileID: 0}
   inventoryItemPrefab: {fileID: 481234755778830357, guid: bee79bd97cccf354aa320817e8b65ac7, type: 3}
   itemRefrence: {fileID: 11400000, guid: 58ad0afc3724b4e41970698b3ff4fc37, type: 2}
-  player: {fileID: 0}
+  playerTransform: {fileID: 8393465690352775749}
 --- !u!114 &-3918819440149613724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,23 +420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5e7ddfadd6d34b97b32a3729104b427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemReference: {fileID: 0}
-  inventorySlots: []
-  invetoryItemPrefab: {fileID: 0}
-  pHealth: {fileID: 0}
---- !u!114 &1851788607325168425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8393465690352775736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4afc29d983baea6429a5fc05a117a71d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemReference: {fileID: 0}
+  itemReference: {fileID: 11400000, guid: b0de1ad56a7474bea924405e33a233d7, type: 2}
   inventorySlots:
   - {fileID: 0}
   - {fileID: 0}
@@ -464,10 +448,49 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   invetoryItemPrefab: {fileID: 481234755778830357, guid: bee79bd97cccf354aa320817e8b65ac7, type: 3}
-  Mech: {fileID: 1466691619722503072, guid: 6ca16b46cad4bfa4cb850bada59a15a8, type: 3}
-  airdropPoint: {fileID: 0}
-  flareShootPoint: {fileID: 0}
-  Speed: 4
+  pHealth: {fileID: 8393465690352775745}
+--- !u!114 &1851788607325168425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8393465690352775736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4afc29d983baea6429a5fc05a117a71d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemReference: {fileID: 11400000, guid: 2956d5f08d2a04f188b0f6d51a259e6e, type: 2}
+  inventorySlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  invetoryItemPrefab: {fileID: 481234755778830357, guid: bee79bd97cccf354aa320817e8b65ac7, type: 3}
+  flareShootPoint: {fileID: 8393465691170401057}
+  playerTransform: {fileID: 8393465690352775749}
 --- !u!1 &8393465690550778295
 GameObject:
   m_ObjectHideFlags: 0

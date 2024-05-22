@@ -6,7 +6,7 @@ public class MechFlare : MonoBehaviour
 {
     public Rigidbody2D rb;
     public GameObject Mech;
-    public GameObject airdropPoint;
+    public Transform airdropPoint;
     private float Speed = 4f;
     
     // Start is called before the first frame update
@@ -19,7 +19,7 @@ public class MechFlare : MonoBehaviour
     {
         Destroy(this, 3);
         yield return new WaitForSeconds(4f);
-        airdropPoint.transform.eulerAngles = new Vector3(airdropPoint.transform.eulerAngles.x, airdropPoint.transform.eulerAngles.y, airdropPoint.transform.eulerAngles.z = 0);
+        airdropPoint.position = new Vector3(this.transform.position.x, 75, 0);
         Instantiate(Mech, airdropPoint.position, airdropPoint.rotation);
     }
 

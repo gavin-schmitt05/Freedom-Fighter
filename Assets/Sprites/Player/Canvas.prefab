@@ -637,6 +637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 1111182315582327534}
   remainingTime: 60
+  Extract: {fileID: 0}
 --- !u!1 &5115540070092643012
 GameObject:
   m_ObjectHideFlags: 0
