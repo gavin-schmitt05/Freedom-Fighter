@@ -98,7 +98,7 @@ public class Shotgun : MonoBehaviour
 
         
         }
-    Destroy(ShotgunBullet, 3);
+    
     ammoCount.UpdateHealthBar(Current--, Max);
         
     }
