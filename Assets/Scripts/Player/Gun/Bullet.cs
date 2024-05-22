@@ -15,6 +15,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.right * BulletSpeed;
+        Destroy(this.gameObject, 3);
 
 
     }
@@ -38,12 +39,23 @@ public class Bullet : MonoBehaviour
             crateComponent.TakeDamage(1);
             Destroy(gameObject);
         }
+
+      //  else if (collision.gameObject.TryGetComponent<doorHealth>(out doorHealth doorComponent))
+      //  {
+       //     doorComponent.TakeDamage(1);
+       //     Destroy(gameObject);
+            
+      //  }
         else if (collision.tag == "ExtractionZone")
         {
 
         }
 
         else if(collision.tag == "Ladder")
+        {
+            
+        }
+        else if (collision.tag == "Bullet")
         {
             
         }
