@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &416376660300141301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6521143904204274792}
+  m_Layer: 9
+  m_Name: AirdropPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6521143904204274792
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416376660300141301}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8393465690352775749}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8393465689690488879
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,6 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0badc3ecdda4255a057c9c3db12521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
   gunSlot: {fileID: 8393465689956491899}
 --- !u!1 &8393465690352775736
 GameObject:
@@ -126,6 +158,7 @@ GameObject:
   - component: {fileID: 8393465690352775759}
   - component: {fileID: 8393465690352775756}
   - component: {fileID: -3918819440149613724}
+  - component: {fileID: 1851788607325168425}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -148,6 +181,7 @@ Transform:
   - {fileID: 8393465691226832125}
   - {fileID: 8393465689690488876}
   - {fileID: 8393465691170401057}
+  - {fileID: 6521143904204274792}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -390,6 +424,50 @@ MonoBehaviour:
   inventorySlots: []
   invetoryItemPrefab: {fileID: 0}
   pHealth: {fileID: 0}
+--- !u!114 &1851788607325168425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8393465690352775736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4afc29d983baea6429a5fc05a117a71d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemReference: {fileID: 0}
+  inventorySlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  invetoryItemPrefab: {fileID: 481234755778830357, guid: bee79bd97cccf354aa320817e8b65ac7, type: 3}
+  Mech: {fileID: 1466691619722503072, guid: 6ca16b46cad4bfa4cb850bada59a15a8, type: 3}
+  airdropPoint: {fileID: 0}
+  flareShootPoint: {fileID: 0}
+  Speed: 4
 --- !u!1 &8393465690550778295
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f294cd5d697de4010985410e68da4397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
   gunSlot: {fileID: 8393465690550778295}
 --- !u!1 &8393465691170401056
 GameObject:

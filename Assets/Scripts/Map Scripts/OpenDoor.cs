@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,6 @@ public class OpenDoor : MonoBehaviour
     public BoxCollider2D doorCollider;
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -30,11 +30,4 @@ public class OpenDoor : MonoBehaviour
             doorCollider.enabled = false;
         }
     }
-       
-
-    
-    
-
-  
-
 }
