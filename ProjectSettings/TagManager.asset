@@ -16,6 +16,7 @@ TagManager:
   - Crate
   - Strong Enemy
   - Extract
+  - Loot
   layers:
   - Default
   - TransparentFX

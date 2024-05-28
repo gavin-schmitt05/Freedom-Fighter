@@ -23,7 +23,6 @@ public class Shooting : MonoBehaviour
     float ReadyForShot;
     public float direction = 0f;
     public playerHealth pHealth;
-    //public GameObject Inventory;
 
 
     // Start is called before the first frame update
@@ -52,8 +51,23 @@ public class Shooting : MonoBehaviour
             ammoCount.UpdateHealthBar(Current, Max);
         }
 
+        if (pHealth.health > 0)
+        {
+            if (Current > 0)
+            {
+                if (Input.GetMouseButton(0))
+                {
+                    if (Time.time > ReadyForShot)
+                    {
+                        ReadyForShot = Time.time + 1 / FireRate;
+                        shoot();
+                    }
+                }
+            }
+        }
 
-    
+
+
 
 
     } 

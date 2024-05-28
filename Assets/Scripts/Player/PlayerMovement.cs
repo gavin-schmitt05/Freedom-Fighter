@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour, IDataPersistence
 {
-
     public float speed = 5f;
     private float direction = 0f;
     public float jumpSpeed = 8f;

@@ -46,14 +46,12 @@ public class Extraction : CollidableObject
 
     protected override void OnCollided(GameObject collidedObject)
     {
-                Debug.Log("????????????????????");
 
         if (Input.GetKey(KeyCode.E))
         {
           if (collidedObject.CompareTag("Player"))
           {
             OnInteract();
-            Debug.Log("BYEE&&&&&&&&&&&&&&&&&&&");
           }
 
         }
@@ -68,7 +66,7 @@ public class Extraction : CollidableObject
             EnemySpawner.SetActive(true);
             Timer.SetActive(true);
             checkStart = true;
-            AstarPath.active.Scan();
+            //AstarPath.active.Scan();
 
             
         } 

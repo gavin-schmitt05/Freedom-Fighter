@@ -13,7 +13,7 @@ public class Boom : MonoBehaviour
     public GameObject enemySprite;
 
     public float SplashRange = 1;
-    public float Damage = 100;
+    public float Damage;
     public playerHealth pHealth;
     public Animator anim;
     public Rigidbody2D nade;
@@ -26,18 +26,8 @@ public class Boom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        
-
-        
         explosionDistanceGo.SetActive(false);
-        StartCoroutine(Checkboom());
-        Debug.Log("played boom script sir");
-        
-        
-       
-
-
+        StartCoroutine(Booom());
     }
     
 
@@ -61,28 +51,17 @@ public class Boom : MonoBehaviour
         nade.constraints = RigidbodyConstraints2D.FreezeAll;
 
 
-      
         Destroy(this.gameObject, 0.6f);
         Debug.Log("test");
-        
-
-
-       
     }
 
 
-    IEnumerator Checkboom()
+    /*IEnumerator Checkboom()
     {
         yield return new WaitForSeconds(1f);
         yield return StartCoroutine(Booom());
-        AstarPath.active.Scan();
-        Debug.Log("is this working ---------------------------------------------->");
-        
-        
-
-
-
-    }
+        //AstarPath.active.Scan();
+    }*/
 
 
     void DestroyArea()
@@ -97,13 +76,13 @@ public class Boom : MonoBehaviour
                 float distance = Vector2.Distance(transform.position, checkCellPos) - 0.001f;
                 if (distance <= radiusInt)
                 {
-                    /*Collider2D overCollider2d = Physics2D.OverlapCircle(checkCellPos, 0.01f, whatisPlatform);
+                    Collider2D overCollider2d = Physics2D.OverlapCircle(checkCellPos, 0.01f, whatisPlatform);
                     if (overCollider2d != null)
                     {
                         overCollider2d.transform.GetComponent<Ground>().MakeDot(checkCellPos);
-                    }*/
+                    }
 
-                    Collider2D[] overCollider2d = Physics2D.OverlapCircleAll(checkCellPos, 0.01f, whatisPlatform);
+                    /*Collider2D[] overCollider2d = Physics2D.OverlapCircleAll(checkCellPos, 0.01f, whatisPlatform);
                     if (overCollider2d.Length > 0)
                     {
                         foreach (Collider2D overColl in overCollider2d)
@@ -113,7 +92,7 @@ public class Boom : MonoBehaviour
                             
                         }
 
-                    }
+                    }*/
                    
                 }
 

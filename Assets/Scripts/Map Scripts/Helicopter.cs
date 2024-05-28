@@ -14,6 +14,7 @@ public class Helicopter : MonoBehaviour
     bool heliCollided = false;
     public BoxCollider2D collider;
     public GameObject Player;
+    public HeliLower heliLower;
 
 
     // Start is called before the first frame update
@@ -30,8 +31,6 @@ public class Helicopter : MonoBehaviour
         {
             heli.velocity = new Vector2(speed, height);
             StartCoroutine(change());
-            
-            
         }
     }
 
@@ -43,19 +42,16 @@ public class Helicopter : MonoBehaviour
             heliCollided = true;
             Player.SetActive(false);
             CameraController.instance.changeCamera(this.transform);
-            
-
+            heliLower.enabled = false;
         }
 
     }
-
 
      IEnumerator change()
     {
         Debug.Log("changing now !!!!!!!!!!!!!");
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene("BaseCampTestScene");
-       
     }
 
 

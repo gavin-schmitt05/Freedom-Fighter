@@ -6,7 +6,7 @@ public class doorHealth : MonoBehaviour
 {
    [SerializeField] float health, maxHealth = 3f;
     // Start is called before the first frame update
-    private void Start()
+    void Start()
     {
         
         health = maxHealth;
@@ -24,8 +24,7 @@ public class doorHealth : MonoBehaviour
         //  healthBar.UpdateHealthBar(health, maxHealth);
         if (health <= 0)
         {
-            
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
 }

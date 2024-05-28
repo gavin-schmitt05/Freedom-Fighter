@@ -16,10 +16,8 @@ public class WeaponInventorySlot : MonoBehaviour, IDropHandler
                 InventoryItem.parentAfterDrag = transform;
                 bool canAddGun = GunSlot.instance.AddGun(InventoryItem.item.itemPrefab);
                 if(canAddGun){
-                    Debug.Log("Gun was added");
                 }
                 else{
-                    Debug.Log("Gun was not added");
                 }
             }
         }

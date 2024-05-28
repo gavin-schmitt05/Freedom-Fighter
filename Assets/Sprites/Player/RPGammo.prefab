@@ -107,7 +107,7 @@ MonoBehaviour:
   circleCollider2D: {fileID: 1718238884667796084}
   enemySprite: {fileID: 0}
   SplashRange: 1
-  Damage: 50
+  Damage: 150
   pHealth: {fileID: 0}
   BulletSpeed: 20
   rb: {fileID: 5072082904941857956}

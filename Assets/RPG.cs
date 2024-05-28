@@ -19,9 +19,8 @@ public class RPG : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        explosionDistanceGo.SetActive(false);
         rb.velocity = transform.right * BulletSpeed;
-
-
     }
 
     // Update is called once per frame
@@ -32,9 +31,10 @@ public class RPG : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent))
+        if (collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent))
         {
             enemyComponent.TakeDamage(10);
+            explosionDistanceGo.SetActive(true);
             DestroyArea();
             Destroy(gameObject);
         }
@@ -42,17 +42,24 @@ public class RPG : MonoBehaviour
         else if (collision.gameObject.TryGetComponent<crateHealth>(out crateHealth crateComponent))
         {
             crateComponent.TakeDamage(10);
+            explosionDistanceGo.SetActive(true);
             DestroyArea();
             Destroy(gameObject);
         }
 
-        else if(collision.tag == "Ladder")
+        else if (collision.tag == "Ladder")
         {
-            
+
+        }
+
+        else if (collision.tag == "Loot")
+        {
+
         }
 
         else
         {
+            explosionDistanceGo.SetActive(true);
             DestroyArea();
             Destroy(gameObject);
         }
@@ -60,7 +67,7 @@ public class RPG : MonoBehaviour
     }
 
 
-       void DestroyArea()
+    void DestroyArea()
     {
         int radiusInt = Mathf.RoundToInt(circleCollider2D.radius);
         for (int i = -radiusInt; i <= radiusInt; i++)
@@ -72,20 +79,12 @@ public class RPG : MonoBehaviour
                 float distance = Vector2.Distance(transform.position, checkCellPos) - 0.001f;
                 if (distance <= radiusInt)
                 {
-                    //    Collider2D overCollider2d = Physics2D.OverlapCircle(checkCellPos, 0.01f, whatisPlatform);
-                    //     if (overCollider2d != null)
-                    //    {
-                    //         overCollider2d.transform.GetComponent<Ground>().MakeDot(checkCellPos);
-                    //      }
-
                     Collider2D[] overCollider2d = Physics2D.OverlapCircleAll(checkCellPos, 0.01f, whatisPlatform);
                     if (overCollider2d.Length > 0)
                     {
                         foreach (Collider2D overColl in overCollider2d)
                         {
-                            overColl.GetComponent<Ground>().MakeDot(checkCellPos);
-                            Debug.Log("played for each statement");
-                            
+                            overColl.GetComponent<Ground>().MakeDot(checkCellPos);  
                         }
 
                     }
@@ -118,14 +117,5 @@ public class RPG : MonoBehaviour
             }
 
         }
-
-
-
-
-
-        
-       // Debug.Log("test---------------->");
-      
-
     }
 }

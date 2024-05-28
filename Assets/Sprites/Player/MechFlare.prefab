@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1154624d947792341b74e5f508da5f58, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00cc927aa6c621f4ca5bf6faf8cb1e8f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -138,4 +138,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 5063210296506421835}
   Mech: {fileID: 1466691619722503072, guid: 6ca16b46cad4bfa4cb850bada59a15a8, type: 3}
-  airdropPoint: {fileID: 0}
+  airDropPointPrefab: {fileID: 8916287673048068019, guid: dc846a5970c2ac849957d6ab4bbff3d2, type: 3}
