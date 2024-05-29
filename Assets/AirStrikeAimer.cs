@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AirStrikeAimer : MonoBehaviour
+public class AirStrikeAimer : MonoBehaviour, ISpecialSlotInterface
 {
     [SerializeField] private Texture2D airStrikeCursor;
 
@@ -10,12 +10,22 @@ public class AirStrikeAimer : MonoBehaviour
 
     private float originalCameraSize;
 
-    // Start is called before the first frame update
+    private bool afterInstantiate; // Had to use this bool because the effects were changing whenever I put the binoculars in the inventory slot, while it was deactivated
+
     void Start()
     {
         originalCameraSize = (float)Camera.main.orthographicSize;
         CameraController.instance.changeCameraZoom(15); // Changes FOV when the aimer is activated
         Cursor.SetCursor(airStrikeCursor, Vector2.zero, CursorMode.Auto); // Sets cursor to red line
+        afterInstantiate = true;
+    }
+
+    void OnEnable()
+    {
+        if (afterInstantiate)
+        {
+            Start();
+        }
     }
 
     // Update is called once per frame
@@ -32,7 +42,14 @@ public class AirStrikeAimer : MonoBehaviour
             Instantiate(airStrike, airStrike.transform.position = new Vector3(mouseWorldPos.x + 8, 160, 0), airStrike.transform.rotation);
             CameraController.instance.changeCameraZoom((int)originalCameraSize);
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+            SpecialSlotInventoryManager.instance.RemoveSpecial(true);
             Destroy(this.gameObject);
         }
+    }
+
+    public void OnDeactivate()
+    {
+        CameraController.instance.changeCameraZoom((int)originalCameraSize);
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 }

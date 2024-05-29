@@ -31,6 +31,66 @@ Transform:
   m_Father: {fileID: 8393465690352775749}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2623119925161719163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3868498934956573948}
+  - component: {fileID: 2857392724802428501}
+  - component: {fileID: 3512523526520652866}
+  m_Layer: 0
+  m_Name: Special Slot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3868498934956573948
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2623119925161719163}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8393465689690488876}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2857392724802428501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2623119925161719163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a94c14ad04b454c9ee53473db127e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherGunSlot: {fileID: 8393465689956491899}
+  thisGunSlot: {fileID: 2623119925161719163}
+--- !u!114 &3512523526520652866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2623119925161719163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c935137930566c543be67e0f526acf7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 8393465690352775736}
 --- !u!1 &8393465689690488879
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +102,7 @@ GameObject:
   - component: {fileID: 8393465689690488876}
   - component: {fileID: 8384156164474459674}
   m_Layer: 0
-  m_Name: GunSlots
+  m_Name: Player Inventory Slots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,6 +122,7 @@ Transform:
   m_Children:
   - {fileID: 8393465689956491896}
   - {fileID: 8393465690550778293}
+  - {fileID: 3868498934956573948}
   m_Father: {fileID: 8393465690352775749}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -78,6 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunSlot2: {fileID: 8393465690550778295}
+  specialSlot: {fileID: 2623119925161719163}
 --- !u!1 &8393465689956491899
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,8 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0badc3ecdda4255a057c9c3db12521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  gunSlot: {fileID: 8393465689956491899}
+  Player: {fileID: 8393465690352775736}
 --- !u!1 &8393465690352775736
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,7 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a94c14ad04b454c9ee53473db127e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherGunSlot: {fileID: 8393465689956491899}
+  otherGunSlot: {fileID: 2623119925161719163}
   thisGunSlot: {fileID: 8393465690550778295}
 --- !u!114 &643417532568112063
 MonoBehaviour:
@@ -550,8 +611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f294cd5d697de4010985410e68da4397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  gunSlot: {fileID: 8393465690550778295}
+  Player: {fileID: 8393465690352775736}
 --- !u!1 &8393465691170401056
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,7 +667,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8393465691226832124}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.165, y: -0.407, z: 0}
+  m_LocalPosition: {x: -0.1231, y: -0.4047, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

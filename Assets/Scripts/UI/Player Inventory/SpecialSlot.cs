@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunSlot : MonoBehaviour
+public class SpecialSlot : MonoBehaviour
 {
-    public static GunSlot instance;
+    public static SpecialSlot instance;
 
-    public GameObject Player; 
-    
-    public GameObject gunSlot;
+    public GameObject Player;
+
     public void Awake()
     {
         instance = this;
@@ -18,13 +17,13 @@ public class GunSlot : MonoBehaviour
     {
         if (Player.transform.localScale == new Vector3(1, 1, 1))
         {
-            gunSlot.transform.eulerAngles = new Vector3(0, 0, 0);
+            this.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
         }
         else if (Player.transform.localScale == new Vector3(-1, 1, 1))
         {
-            gunSlot.transform.eulerAngles = new Vector3(0, 180, 0);
+            this.gameObject.transform.eulerAngles = new Vector3(0, 180, 0);
         }
-        (Instantiate (item, gunSlot.transform.position, gunSlot.transform.rotation) as GameObject).transform.parent = gunSlot.transform;
+        (Instantiate(item, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject).transform.parent = this.gameObject.transform;
         return true;
     }
 }

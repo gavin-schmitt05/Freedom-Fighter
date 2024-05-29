@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponInventoryManager1 : MonoBehaviour
+public class WeaponInventoryManager2 : MonoBehaviour
 {
-    public WeaponInventorySlot1[] weaponInventorySlots1;
+    public WeaponInventorySlot2[] weaponInventorySlots2;
     public GameObject weaponInventoryItemPrefab;
     public GameObject gunSlot;
-    public static WeaponInventoryManager1 instance;
+    public static WeaponInventoryManager2 instance;
 
     public void Awake()
     {
@@ -17,9 +17,9 @@ public class WeaponInventoryManager1 : MonoBehaviour
     public bool AddItem(Item item)
     {
         // Find any empty slot
-        for (int i = 0; i < weaponInventorySlots1.Length; i++)
+        for (int i = 0; i < weaponInventorySlots2.Length; i++)
         {
-            WeaponInventorySlot1 slot = weaponInventorySlots1[i];
+            WeaponInventorySlot2 slot = weaponInventorySlots2[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
             if (itemInSlot == null)
             {
@@ -31,7 +31,7 @@ public class WeaponInventoryManager1 : MonoBehaviour
         return false;
     }
 
-    void SpawnNewItem(Item item, WeaponInventorySlot1 slot)
+    void SpawnNewItem(Item item, WeaponInventorySlot2 slot)
     {
         GameObject newItemGo = Instantiate(weaponInventoryItemPrefab, slot.transform);
         InventoryItem inventoryItem = newItemGo.GetComponent<InventoryItem>();
@@ -40,9 +40,9 @@ public class WeaponInventoryManager1 : MonoBehaviour
 
     public void RemoveGun()
     {
-         for (int i = 0; i < weaponInventorySlots1.Length; i++)
+         for (int i = 0; i < weaponInventorySlots2.Length; i++)
         {
-            WeaponInventorySlot1 slot = weaponInventorySlots1[i];
+            WeaponInventorySlot2 slot = weaponInventorySlots2[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
             if (itemInSlot == null )
             {

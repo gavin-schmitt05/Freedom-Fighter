@@ -8,13 +8,12 @@ public class Helicopter : MonoBehaviour
 
     private Rigidbody2D heli;
 
-    public float speed = 5f;
-    public float height = 2f;
+    private float speed = 5f;
+    private float height = 2f;
 
     bool heliCollided = false;
     public BoxCollider2D collider;
     public GameObject Player;
-    public HeliLower heliLower;
 
 
     // Start is called before the first frame update
@@ -42,7 +41,7 @@ public class Helicopter : MonoBehaviour
             heliCollided = true;
             Player.SetActive(false);
             CameraController.instance.changeCamera(this.transform);
-            heliLower.enabled = false;
+            Timer.instance.disableTimer(true);
         }
 
     }

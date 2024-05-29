@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunSlot1 : MonoBehaviour
+public class GunSlot2 : MonoBehaviour
 {
-    public static GunSlot1 instance;
+    public static GunSlot2 instance;
 
-    public GameObject Player; 
+    public GameObject Player;
 
     public void Awake()
     {

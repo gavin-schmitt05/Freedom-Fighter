@@ -54,8 +54,12 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         image.raycastTarget = true;
         transform.SetParent(parentAfterDrag);
         if(item.isGun == true){
-            WeaponInventoryManager.instance.RemoveGun();
             WeaponInventoryManager1.instance.RemoveGun();
+            WeaponInventoryManager2.instance.RemoveGun();
+        }
+        else if(item.isSpecial == true)
+        {
+            SpecialSlotInventoryManager.instance.RemoveSpecial(false);
         }
     }
 }

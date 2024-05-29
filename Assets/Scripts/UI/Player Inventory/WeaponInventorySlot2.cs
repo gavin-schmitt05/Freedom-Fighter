@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class WeaponInventorySlot : MonoBehaviour, IDropHandler
+public class WeaponInventorySlot2 : MonoBehaviour, IDropHandler
 {
     public void OnDrop(PointerEventData eventData)
     {
@@ -14,11 +14,7 @@ public class WeaponInventorySlot : MonoBehaviour, IDropHandler
             if(InventoryItem.item.isGun == true)
             {
                 InventoryItem.parentAfterDrag = transform;
-                bool canAddGun = GunSlot.instance.AddGun(InventoryItem.item.itemPrefab);
-                if(canAddGun){
-                }
-                else{
-                }
+                GunSlot2.instance.AddGun(InventoryItem.item.itemPrefab);
             }
         }
     }

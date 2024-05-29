@@ -14,6 +14,7 @@ public class Item : ScriptableObject {
     [Header("Only UI")]
     public bool stackable = true;
     public bool isGun = true;
+    public bool isSpecial = false;
     public int maxStackOfItem;
 
     [Header("Both")]

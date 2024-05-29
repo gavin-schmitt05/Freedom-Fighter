@@ -51,7 +51,6 @@ public class ZoneChecker : MonoBehaviour
         {
             Transform target = rangeCheck[0].transform;
             Vector2 directionToTarget = (target.position - transform.position).normalized;
-            Debug.Log("player is in the extraction range");
            
             
         }
@@ -60,7 +59,6 @@ public class ZoneChecker : MonoBehaviour
            Timer.SetActive(false);
            Extract.z_Interacted = false;
            Extract.EnemySpawner.SetActive(false);
-           Debug.Log("player is outside fo the extraction range");
         }
         }
 
