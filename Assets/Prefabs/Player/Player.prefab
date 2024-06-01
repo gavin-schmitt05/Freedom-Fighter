@@ -150,7 +150,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8393465689956491896}
   - component: {fileID: 8393465689956491897}
-  - component: {fileID: 8393465689956491910}
   m_Layer: 0
   m_Name: GunSlot1
   m_TagString: Untagged
@@ -187,19 +186,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherGunSlot: {fileID: 8393465690550778295}
   thisGunSlot: {fileID: 8393465689956491899}
---- !u!114 &8393465689956491910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8393465689956491899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c0badc3ecdda4255a057c9c3db12521, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 8393465690352775736}
 --- !u!1 &8393465690352775736
 GameObject:
   m_ObjectHideFlags: 0
