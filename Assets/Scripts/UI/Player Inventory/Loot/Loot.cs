@@ -6,8 +6,6 @@ using System;
 public class Loot : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer sr;
-    [SerializeField] private new BoxCollider2D collider;
-    [SerializeField] private float moveSpeed;
     [SerializeField] private Item itemToPickup;
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -25,7 +23,6 @@ public class Loot : MonoBehaviour
 
     private IEnumerator MoveAndCollect(Transform target)
     {
-        Destroy(collider);
         Destroy(gameObject);
         yield return 0;
     }

@@ -20,7 +20,6 @@ public class Timer : MonoBehaviour
     public GameObject Extraction;
     public GameObject heli;
     private GameObject newHeli;
-    //public GameObject endPoint;
 
     // Update is called once per frame
     void Update()

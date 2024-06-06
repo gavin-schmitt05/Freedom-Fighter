@@ -17,6 +17,8 @@ TagManager:
   - Strong Enemy
   - Extract
   - Loot
+  - Background
+  - Mech
   layers:
   - Default
   - TransparentFX

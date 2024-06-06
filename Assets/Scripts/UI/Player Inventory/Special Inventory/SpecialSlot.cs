@@ -23,7 +23,7 @@ public class SpecialSlot : MonoBehaviour
         {
             this.gameObject.transform.eulerAngles = new Vector3(0, 180, 0);
         }
-        (Instantiate(item, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject).transform.parent = this.gameObject.transform;
+        (Instantiate(item, this.gameObject.transform.position , item.transform.rotation) as GameObject).transform.parent = this.gameObject.transform;
         return true;
     }
 }

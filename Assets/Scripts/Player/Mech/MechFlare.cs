@@ -11,7 +11,6 @@ public class MechFlare : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         rb.velocity = this.transform.right * Speed;
         StartCoroutine(MechDropper());
     }
@@ -19,8 +18,7 @@ public class MechFlare : MonoBehaviour
     {
         Destroy(this.gameObject, 5);
         yield return new WaitForSeconds(4);
-        //airdropPoint.transform.position = new Vector3(this.gameObject.transform.position.x, 75, 0);
-        Instantiate(Mech, this.transform.position = new Vector3(this.gameObject.transform.position.x, 75, 0), Quaternion.Euler(0, 0, 0));
+        Instantiate(Mech, new Vector3(this.gameObject.transform.position.x, 75, 0), Quaternion.Euler(0, 0, 0));
     }
 
 }

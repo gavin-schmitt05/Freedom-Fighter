@@ -39,7 +39,7 @@ public class SpecialSlotInventoryManager : MonoBehaviour
         inventoryItem.InitialiseItem(item);
     }
 
-    public void RemoveSpecial(bool airstrikeUsed)
+    public void RemoveSpecial(bool specialUsed)
     {
         for (int i = 0; i < specialInventorySlots.Length; i++)
         {
@@ -52,7 +52,7 @@ public class SpecialSlotInventoryManager : MonoBehaviour
                     Destroy(child.gameObject);
                 }
             }
-            else if (airstrikeUsed)
+            else if (specialUsed)
             {
                 itemInSlot.count--;
                 if (itemInSlot.count <= 0)

@@ -24,9 +24,6 @@ public class RangedEnemy : MonoBehaviour
     [SerializeField] public float cooldownDuration;
     public float cooldownTimer;
 
-
-    [SerializeField] private BoxCollider2D panicZone;
-
     private bool playerCloseSight = false;
 
     //References
@@ -141,6 +138,10 @@ public class RangedEnemy : MonoBehaviour
         if (collision.CompareTag("Grenade"))
         {
             Panic();
+        }
+        else
+        {
+
         }
     }
 

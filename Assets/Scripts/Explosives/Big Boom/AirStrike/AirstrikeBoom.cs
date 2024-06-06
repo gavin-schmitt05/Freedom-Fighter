@@ -43,12 +43,17 @@ public class AirstrikeBoom : MonoBehaviour
             Destroy(gameObject);
         }
 
-        else if (collision.tag == "Ladder")
+        else if (collision.CompareTag("Ladder"))
         {
 
         }
 
-        else if (collision.tag == "Loot")
+        else if (collision.CompareTag("Loot"))
+        {
+
+        }
+
+        else if (collision.CompareTag("Background"))
         {
 
         }

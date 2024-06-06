@@ -23,12 +23,6 @@ public class RPG : MonoBehaviour
         rb.velocity = transform.right * BulletSpeed;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent))
@@ -36,7 +30,7 @@ public class RPG : MonoBehaviour
             enemyComponent.TakeDamage(10);
             explosionDistanceGo.SetActive(true);
             DestroyArea();
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
 
         else if (collision.gameObject.TryGetComponent<crateHealth>(out crateHealth crateComponent))
@@ -44,7 +38,7 @@ public class RPG : MonoBehaviour
             crateComponent.TakeDamage(10);
             explosionDistanceGo.SetActive(true);
             DestroyArea();
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
 
         else if (collision.tag == "Ladder")
@@ -61,7 +55,7 @@ public class RPG : MonoBehaviour
         {
             explosionDistanceGo.SetActive(true);
             DestroyArea();
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
             
     }

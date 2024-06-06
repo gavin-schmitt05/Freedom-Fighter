@@ -25,6 +25,7 @@ public class Shooting : MonoBehaviour
     public playerHealth pHealth;
 
 
+
     // Start is called before the first frame update
     void Awake(){
         player = GameObject.Find("Player");

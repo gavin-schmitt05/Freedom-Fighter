@@ -44,13 +44,6 @@ public class Bullet : MonoBehaviour
             doorComponent.TakeDamage(1);
             Destroy(gameObject);
         }
-
-        //  else if (collision.gameObject.TryGetComponent<doorHealth>(out doorHealth doorComponent))
-        //  {
-        //     doorComponent.TakeDamage(1);
-        //     Destroy(gameObject);
-
-        //  }
         else if (collision.tag == "ExtractionZone")
         {
 

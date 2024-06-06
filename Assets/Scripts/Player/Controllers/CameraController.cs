@@ -8,6 +8,11 @@ public class CameraController : MonoBehaviour
 
     [SerializeField] private Camera camera;
 
+    void Start()
+    {
+        Camera.main.fieldOfView = 64;
+        Camera.main.orthographicSize = 6;
+    }
     // Start is called before the first frame update
     void Awake()
     {
@@ -23,10 +28,12 @@ public class CameraController : MonoBehaviour
         // -------------------Code for Zooming Out------------
         if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
-            if (Camera.main.fieldOfView <= 125)
+            if (Camera.main.fieldOfView <= 62)
                 Camera.main.fieldOfView += 2;
-            if (Camera.main.orthographicSize <= 7)
+            if (Camera.main.orthographicSize <= 5.5)
                 Camera.main.orthographicSize += 0.5f;
+            
+            
 
         }
         // ---------------Code for Zooming In------------------------

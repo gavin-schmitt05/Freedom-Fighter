@@ -48,7 +48,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.11598742, y: 0.14141859}
   serializedVersion: 2
-  m_Radius: 3.5
+  m_Radius: 3
 --- !u!250 &2596628674862238630
 PointEffector2D:
   m_ObjectHideFlags: 0
@@ -211,7 +211,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

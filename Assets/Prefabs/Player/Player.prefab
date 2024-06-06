@@ -57,7 +57,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2623119925161719163}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -794.236, y: -452.413, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -150,6 +150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8393465689956491896}
   - component: {fileID: 8393465689956491897}
+  - component: {fileID: 4975147495814953886}
   m_Layer: 0
   m_Name: GunSlot1
   m_TagString: Untagged
@@ -186,6 +187,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherGunSlot: {fileID: 8393465690550778295}
   thisGunSlot: {fileID: 8393465689956491899}
+--- !u!114 &4975147495814953886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8393465689956491899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0badc3ecdda4255a057c9c3db12521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
 --- !u!1 &8393465690352775736
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,7 +562,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8393465690550778293}
   - component: {fileID: 8393465690550778292}
-  - component: {fileID: 643417532568112063}
+  - component: {fileID: 5400642375150400805}
   m_Layer: 0
   m_Name: GunSlot2
   m_TagString: Untagged
@@ -585,7 +599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherGunSlot: {fileID: 2623119925161719163}
   thisGunSlot: {fileID: 8393465690550778295}
---- !u!114 &643417532568112063
+--- !u!114 &5400642375150400805
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -594,10 +608,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8393465690550778295}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f294cd5d697de4010985410e68da4397, type: 3}
+  m_Script: {fileID: 11500000, guid: 284a0d86637b445dd8668993d0ba3c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 8393465690352775736}
+  Player: {fileID: 0}
 --- !u!1 &8393465691170401056
 GameObject:
   m_ObjectHideFlags: 0

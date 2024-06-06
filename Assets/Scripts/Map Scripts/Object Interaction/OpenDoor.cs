@@ -29,5 +29,9 @@ public class OpenDoor : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().sprite = opened;
             doorCollider.enabled = false;
         }
+        if (collision.gameObject.CompareTag("Mech"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

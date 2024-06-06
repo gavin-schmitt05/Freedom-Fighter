@@ -14,10 +14,9 @@ public class MechControl : MonoBehaviour
     //Added to mech script
     [HideInInspector] private GameObject Player;
     [SerializeField] private BoxCollider2D Entrance;
-    [HideInInspector] public bool playerEnteredMech = false;
+    [HideInInspector] private bool playerEnteredMech = false;
     private bool playerInEntrance = false;
-    public Transform mechTransform;
-    public Vector3 playerTransform;
+    [SerializeField] private Transform mechTransform;
 
     
     public Transform groundCheck;
